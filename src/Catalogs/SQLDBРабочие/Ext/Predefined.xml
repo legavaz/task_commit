@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.20">
+	<Item id="ca290f9b-5414-420a-a5c9-826593757182">
+		<Name>ERP_work_2_5</Name>
+		<Code>4</Code>
+		<Description>zERP_work_update</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

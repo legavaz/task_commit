@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор значений для отбора</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="OK" id="28">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.OK</CommandName>
+				<ExtendedTooltip name="OKExtendedTooltip" id="55"/>
+			</Button>
+			<Button name="Cancel" id="29">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="CancelExtendedTooltip" id="56"/>
+			</Button>
+			<Button name="Help" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="HelpExtendedTooltip" id="57"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Group1" id="3">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Group1ExtendedTooltip" id="58"/>
+			<ChildItems>
+				<Table name="PossibleList" id="8">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Width>30</Width>
+					<MultipleChoice>true</MultipleChoice>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>PossibleList</DataPath>
+					<RowPictureDataPath>PossibleList.Picture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>CheckAll</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>UncheckAll</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="PossibleListContextMenu" id="9">
+						<ChildItems>
+							<Button name="ContextMenuPossibleListAddToFilter" id="31">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.AddToFilter</CommandName>
+								<ExtendedTooltip name="ContextMenuPossibleListAddToFilterExtendedTooltip" id="59"/>
+							</Button>
+							<Button name="ContextMenuPossibleListAddToFilterAll" id="32">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.AddToFilterAll</CommandName>
+								<ExtendedTooltip name="ContextMenuPossibleListAddToFilterAllExtendedTooltip" id="60"/>
+							</Button>
+							<Button name="ContextMenuPossibleListSelectAll" id="33">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.PossibleList.StandardCommand.SelectAll</CommandName>
+								<ExtendedTooltip name="ContextMenuPossibleListSelectAllExtendedTooltip" id="61"/>
+							</Button>
+							<ButtonGroup name="PossibleListFindGroup" id="47">
+								<ExtendedTooltip name="PossibleListFindGroupExtendedTooltip" id="62"/>
+								<ChildItems>
+									<Button name="ContextMenuPossibleListFind" id="45">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.PossibleList.StandardCommand.Find</CommandName>
+										<ExtendedTooltip name="ContextMenuPossibleListFindExtendedTooltip" id="63"/>
+									</Button>
+									<Button name="ContextMenuPossibleListCancelSearch" id="46">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.PossibleList.StandardCommand.CancelSearch</CommandName>
+										<ExtendedTooltip name="ContextMenuPossibleListCancelSearchExtendedTooltip" id="64"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="PossibleListCommandBar" id="10"/>
+					<ExtendedTooltip name="PossibleListExtendedTooltip" id="65"/>
+					<SearchStringAddition name="PossibleListСтрокаПоиска" id="80">
+						<AdditionSource>
+							<Item>PossibleList</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="PossibleListСтрокаПоискаКонтекстноеМеню" id="81"/>
+						<ExtendedTooltip name="PossibleListСтрокаПоискаРасширеннаяПодсказка" id="82"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="PossibleListСостояниеПросмотра" id="83">
+						<AdditionSource>
+							<Item>PossibleList</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="PossibleListСостояниеПросмотраКонтекстноеМеню" id="84"/>
+						<ExtendedTooltip name="PossibleListСостояниеПросмотраРасширеннаяПодсказка" id="85"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="PossibleListУправлениеПоиском" id="86">
+						<AdditionSource>
+							<Item>PossibleList</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="PossibleListУправлениеПоискомКонтекстноеМеню" id="87"/>
+						<ExtendedTooltip name="PossibleListУправлениеПоискомРасширеннаяПодсказка" id="88"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="DragCheck">PossibleListDragCheck</Event>
+						<Event name="Selection">PossibleListSelection</Event>
+						<Event name="DragStart">PossibleListDragStart</Event>
+						<Event name="Drag">PossibleListDrag</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="PossibleListPresentation" id="51">
+							<DataPath>PossibleList.Presentation</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="PossibleListPresentationКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="PossibleListPresentationExtendedTooltip" id="66"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="Group4" id="6">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="Group4ExtendedTooltip" id="67"/>
+					<ChildItems>
+						<Button name="AddToFilter" id="13">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.AddToFilter</CommandName>
+							<ExtendedTooltip name="AddToFilterExtendedTooltip" id="68"/>
+						</Button>
+						<Button name="AddToFilterAll" id="14">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.AddToFilterAll</CommandName>
+							<ExtendedTooltip name="AddToFilterAllExtendedTooltip" id="69"/>
+						</Button>
+						<Button name="RemoveFromFilter" id="15">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.RemoveFromFilter</CommandName>
+							<ExtendedTooltip name="RemoveFromFilterExtendedTooltip" id="70"/>
+						</Button>
+						<Button name="RemoveFromFilterAll" id="16">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.RemoveFromFilterAll</CommandName>
+							<ExtendedTooltip name="RemoveFromFilterAllExtendedTooltip" id="71"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Filter" id="22">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Width>30</Width>
+					<MultipleChoice>true</MultipleChoice>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Filter</DataPath>
+					<RowPictureDataPath>Filter.Picture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>CheckAll</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>UncheckAll</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="FilterContextMenu" id="23">
+						<ChildItems>
+							<Button name="ContextMenuFilterRemoveFromFilter" id="34">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.RemoveFromFilter</CommandName>
+								<ExtendedTooltip name="ContextMenuFilterRemoveFromFilterExtendedTooltip" id="72"/>
+							</Button>
+							<Button name="ContextMenuFilterRemoveFromFilterAll" id="35">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.RemoveFromFilterAll</CommandName>
+								<ExtendedTooltip name="ContextMenuFilterRemoveFromFilterAllExtendedTooltip" id="73"/>
+							</Button>
+							<Button name="ContextMenuFilterSelectAll" id="36">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Filter.StandardCommand.SelectAll</CommandName>
+								<ExtendedTooltip name="ContextMenuFilterSelectAllExtendedTooltip" id="74"/>
+							</Button>
+							<ButtonGroup name="FilterFindGroup" id="48">
+								<ExtendedTooltip name="FilterFindGroupExtendedTooltip" id="75"/>
+								<ChildItems>
+									<Button name="ContextMenuFilterFind" id="49">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Filter.StandardCommand.Find</CommandName>
+										<ExtendedTooltip name="ContextMenuFilterFindExtendedTooltip" id="76"/>
+									</Button>
+									<Button name="ContextMenuFilterCancelSearch" id="50">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Filter.StandardCommand.CancelSearch</CommandName>
+										<ExtendedTooltip name="ContextMenuFilterCancelSearchExtendedTooltip" id="77"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="FilterCommandBar" id="24"/>
+					<ExtendedTooltip name="FilterExtendedTooltip" id="78"/>
+					<SearchStringAddition name="FilterСтрокаПоиска" id="89">
+						<AdditionSource>
+							<Item>Filter</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="FilterСтрокаПоискаКонтекстноеМеню" id="90"/>
+						<ExtendedTooltip name="FilterСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="FilterСостояниеПросмотра" id="92">
+						<AdditionSource>
+							<Item>Filter</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="FilterСостояниеПросмотраКонтекстноеМеню" id="93"/>
+						<ExtendedTooltip name="FilterСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="FilterУправлениеПоиском" id="95">
+						<AdditionSource>
+							<Item>Filter</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="FilterУправлениеПоискомКонтекстноеМеню" id="96"/>
+						<ExtendedTooltip name="FilterУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="DragCheck">FilterDragCheck</Event>
+						<Event name="Selection">FilterSelection</Event>
+						<Event name="DragStart">FilterDragStart</Event>
+						<Event name="Drag">FilterDrag</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="FilterPresentation" id="53">
+							<DataPath>Filter.Presentation</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="FilterPresentationКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="FilterPresentationExtendedTooltip" id="79"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.StandardEventLog</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="LoadedFile" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Loaded file</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="UseParameter" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя редактируемого параметра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Filter1" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные значения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Value" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Value</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Presentation" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="PossibleList1" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные значения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Value" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Value</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Presentation" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="DialogTitle" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Dialog title</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="KeyValue" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Key value</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Filter" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные значения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PossibleList" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные значения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="AddToFilter" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить &gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить значение в отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>AddToFilter</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="AddToFilterAll" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все &gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в отбор все значения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>AddToFilterAll</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="RemoveFromFilter" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt; Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить значение отбора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>RemoveFromFilter</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="RemoveFromFilterAll" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt; Удалить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить список значений отбора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>RemoveFromFilterAll</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="JournalFile">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="UseParameter">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="SelectList">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="KeyValue">
+			<Type/>
+		</Parameter>
+		<Parameter name="UseParameterPresentation">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Enum uuid="4705a99a-2af2-4531-bd09-e342494abe3b">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.sqlТипыЗаданий" category="Ref">
+				<xr:TypeId>85cdf3d5-7f70-4f06-b0c9-b634cf2785cd</xr:TypeId>
+				<xr:ValueId>6dc73c46-1bdc-4f73-9b74-ef5502f08d51</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.sqlТипыЗаданий" category="Manager">
+				<xr:TypeId>2d74d041-bd98-4eb2-86d8-5c1ca87c39a6</xr:TypeId>
+				<xr:ValueId>049116c1-2662-4072-8a49-099879644507</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.sqlТипыЗаданий" category="List">
+				<xr:TypeId>d3657453-0cc6-4bd5-8f2a-582087e1bdd4</xr:TypeId>
+				<xr:ValueId>0165981e-48e3-4f82-b9ef-505209f6d8a1</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>sqlТипыЗаданий</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы заданий (sql)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>SD-66081</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="7ebc8032-e6a5-431f-825e-6828aec45787">
+				<Properties>
+					<Name>Восстановление</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Восстановление</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="94cc0627-acbb-4d54-9012-5f5940efede5">
+				<Properties>
+					<Name>РезервноеКопирование</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Резервное копирование</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cd6473f5-d40d-41bc-94c9-9ce364c3a46c">
+				<Properties>
+					<Name>Сокращение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сокращение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="87f6f4ba-552e-4422-8a0f-3bdd52eacecb">
+				<Properties>
+					<Name>Управление</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

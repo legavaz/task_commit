@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.20">
+	<Item id="f0bf2041-011b-479d-b5eb-83d4742954de">
+		<Name>BusinessProcesses</Name>
+		<Code/>
+		<Description>Бизнес-процессы</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="52d86968-c0f6-4b75-bc87-91629fb892ff">
+		<Name>Documents</Name>
+		<Code/>
+		<Description>Документы</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="4aaffc59-66a7-4d64-b8fd-1924d41e0e96">
+				<Name>Sequences</Name>
+				<Code/>
+				<Description>Последовательности</Description>
+				<IsFolder>true</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="8ddd93df-725f-4439-9648-f5d800dae458">
+		<Name>DocumentJournals</Name>
+		<Code/>
+		<Description>Журналы документов</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="18c5863d-3c30-461a-a488-b0ca623b24b5">
+		<Name>Tasks</Name>
+		<Code/>
+		<Description>Задачи</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="4b4a7ea4-5c42-47cb-962a-a0d607355cbf">
+		<Name>Constants</Name>
+		<Code/>
+		<Description>Константы</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="8130b053-f8a4-499c-afc1-1a8dea41cdd0">
+		<Name>DataProcessors</Name>
+		<Code/>
+		<Description>Обработки</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="4a93b584-70b5-408d-ab58-9a5409138855">
+		<Name>Общие</Name>
+		<Code/>
+		<Description>Общие</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="62baeb56-aaaf-42c5-ab4e-7aff57d5a113">
+				<Name>HTTPServices</Name>
+				<Code/>
+				<Description>HTTP-сервисы</Description>
+				<IsFolder>true</IsFolder>
+			</Item>
+			<Item id="281a61bd-9cd6-4e7c-8fa8-194a9779c5f3">
+				<Name>WebServices</Name>
+				<Code/>
+				<Description>Web-сервисы</Description>
+				<IsFolder>true</IsFolder>
+			</Item>
+			<Item id="6632fdf2-f67b-4586-9fa4-90b7f8426fbc">
+				<Name>FilterCriteria</Name>
+				<Code/>
+				<Description>Критерии отбора</Description>
+				<IsFolder>true</IsFolder>
+			</Item>
+			<Item id="20af9c7d-5d94-4401-b7b4-4b858be78859">
+				<Name>CommonCommands</Name>
+				<Code/>
+				<Description>Общие комманды</Description>
+				<IsFolder>true</IsFolder>
+			</Item>
+			<Item id="150ada2b-3fff-44c0-a231-e8d149cb3952">
+				<Name>CommonModules</Name>
+				<Code/>
+				<Description>Общие модули</Description>
+				<IsFolder>true</IsFolder>
+			</Item>
+			<Item id="6827e5c8-3645-4dbf-a2c7-d641602d038d">
+				<Name>CommonForms</Name>
+				<Code/>
+				<Description>Общие формы</Description>
+				<IsFolder>true</IsFolder>
+			</Item>
+			<Item id="048cabe9-db8c-484c-9529-1ffc2ac9e616">
+				<Name>ExchangePlans</Name>
+				<Code/>
+				<Description>Планы обмена</Description>
+				<IsFolder>true</IsFolder>
+			</Item>
+			<Item id="b61dde4c-7f4b-436e-ad0e-84cf3d449970">
+				<Name>SettingsStorages</Name>
+				<Code/>
+				<Description>Хранилища настроек</Description>
+				<IsFolder>true</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="7af2c892-cdec-43ea-a238-95f2d5751bad">
+		<Name>Reports</Name>
+		<Code/>
+		<Description>Отчеты</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="6ff14392-0bc2-46a2-b4a3-35fedade17c8">
+		<Name>Enums</Name>
+		<Code/>
+		<Description>Перечисления</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="acb7eb68-490b-4635-83f6-731d97c28dbd">
+		<Name>ChartsOfCalculationTypes</Name>
+		<Code/>
+		<Description>Планы видов расчета</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="8e46dea7-be3a-4d0a-82b1-916bcea97c3f">
+		<Name>ChartsOfCharacteristicTypes</Name>
+		<Code/>
+		<Description>Планы видов характеристик</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="6b39b157-441b-476b-a0a8-7dd415559869">
+		<Name>ChartsOfAccounts</Name>
+		<Code/>
+		<Description>Планы счетов</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="51d02f4d-c954-4d3e-9180-11ce8b0b6f3f">
+		<Name>AccountingRegisters</Name>
+		<Code/>
+		<Description>Регистры бухгатерии</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="600434dc-00ed-4e8b-a9cc-00284ee870d4">
+		<Name>AccumulationRegisters</Name>
+		<Code/>
+		<Description>Регистры накопления</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="df11147a-c90d-49c8-9d93-f5385a044a5f">
+		<Name>CalculationRegisters</Name>
+		<Code/>
+		<Description>Регистры расчета</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="4977ee4b-c611-496f-934e-2d118ccc656f">
+		<Name>InformationRegisters</Name>
+		<Code/>
+		<Description>Регистры сведений</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="794fd1ae-bfd4-41bf-b8af-6bae62cf714a">
+		<Name>Catalogs</Name>
+		<Code/>
+		<Description>Справочники</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+</PredefinedData>
