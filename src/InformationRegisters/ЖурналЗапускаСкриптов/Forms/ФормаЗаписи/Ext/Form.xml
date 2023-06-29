@@ -4,39 +4,26 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="Группа1" id="10">
-			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="11"/>
 			<ChildItems>
-				<InputField name="НачалоПериод" id="18">
-					<DataPath>Запись.НачалоПериод</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>с</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="НачалоПериодКонтекстноеМеню" id="19"/>
-					<ExtendedTooltip name="НачалоПериодРасширеннаяПодсказка" id="20"/>
+				<InputField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
 				</InputField>
-				<InputField name="КонецПериод" id="21">
-					<DataPath>Запись.КонецПериод</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>по</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="КонецПериодКонтекстноеМеню" id="22"/>
-					<ExtendedTooltip name="КонецПериодРасширеннаяПодсказка" id="23"/>
-				</InputField>
+				<CheckBoxField name="ПустойЛог" id="12">
+					<DataPath>Запись.ПустойЛог</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПустойЛогКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ПустойЛогРасширеннаяПодсказка" id="14"/>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="ИБ" id="4">
-			<DataPath>Запись.Сценарий</DataPath>
+			<DataPath>Запись.ИБ</DataPath>
 			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="ИБКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ИБРасширеннаяПодсказка" id="6"/>
@@ -48,7 +35,7 @@
 			<ExtendedTooltip name="СкриптРасширеннаяПодсказка" id="17"/>
 		</InputField>
 		<InputField name="Лог" id="7">
-			<DataPath>Запись.Результат</DataPath>
+			<DataPath>Запись.Лог</DataPath>
 			<ReadOnly>true</ReadOnly>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="ЛогКонтекстноеМеню" id="8"/>

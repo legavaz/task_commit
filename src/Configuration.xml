@@ -66,9 +66,9 @@
 			<DynamicListsUserSettingsStorage/>
 			<URLExternalDataStorage/>
 			<Content/>
-			<DefaultReportForm>CommonForm.ФормаОтчета</DefaultReportForm>
-			<DefaultReportVariantForm>CommonForm.ФормаВариантаОтчета</DefaultReportVariantForm>
-			<DefaultReportSettingsForm>CommonForm.ФормаНастроекОтчета</DefaultReportSettingsForm>
+			<DefaultReportForm/>
+			<DefaultReportVariantForm/>
+			<DefaultReportSettingsForm/>
 			<DefaultReportAppearanceTemplate/>
 			<DefaultDynamicListSettingsForm/>
 			<DefaultSearchForm/>
@@ -264,17 +264,15 @@
 			<SynchronousPlatformExtensionAndAddInCallUseMode>Use</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>TaxiEnableVersion8_2</InterfaceCompatibilityMode>
 			<DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
-			<CompatibilityMode>Version8_3_16</CompatibilityMode>
+			<CompatibilityMode>Version8_3_14</CompatibilityMode>
 			<DefaultConstantsForm/>
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<Subsystem>Планировщик</Subsystem>
-			<Subsystem>кстПоказатели</Subsystem>
+			<Subsystem>Задачник</Subsystem>
+			<Subsystem>Администрирование</Subsystem>
 			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
-			<Subsystem>Администрирование</Subsystem>
-			<Subsystem>РеестрПроцедур</Subsystem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряРабочийЦвет</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряПраздникЦвет</StyleItem>
@@ -587,7 +585,6 @@
 			<SessionParameter>ТипыВладельцевНастроекПрав</SessionParameter>
 			<SessionParameter>ТипыЗначенийДоступаСГруппами</SessionParameter>
 			<SessionParameter>УстановленныеРасширения</SessionParameter>
-			<SessionParameter>КомментарийЗамераВремени</SessionParameter>
 			<Role>АдминистраторСистемы</Role>
 			<Role>БазовыеПраваБСП</Role>
 			<Role>БазовыеПраваВнешнихПользователейБСП</Role>
@@ -631,63 +628,23 @@
 			<Role>ЧтениеШаблоновСообщений</Role>
 			<Role>ИспользованиеОбработкиТекущиеДела</Role>
 			<Role>ЗапускЗаданийSQL</Role>
-			<Role>ВнешниеИсточникиJira_Чтение</Role>
-			<Role>НастройкаИОценкаПроизводительности</Role>
-			<Role>ЧтениеОтчетОбОшибках</Role>
-			<Role>ИспользованиеКонсолиСеансов</Role>
 			<CommonTemplate>ПолучениеДереваОбработчиковОбновления</CommonTemplate>
-			<CommonTemplate>УКО_ШаблоныРедактированияВыраженияПараметр</CommonTemplate>
-			<CommonTemplate>УКО_ШаблоныРедактированияВыраженияВнешнегоИсточника</CommonTemplate>
-			<CommonModule>SQLВыполнениеЗаданий</CommonModule>
-			<CommonModule>АвтономныйСервер</CommonModule>
 			<CommonModule>АдминистрированиеКластера</CommonModule>
-			<CommonModule>АдминистрированиеКластераCOM</CommonModule>
-			<CommonModule>АдминистрированиеКластераCOMКлиентСервер</CommonModule>
-			<CommonModule>АдминистрированиеКластераRAS</CommonModule>
+			<CommonModule>ВариантыОтчетовСлужебныйКлиентСервер</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработки</CommonModule>
 			<CommonModule>АдминистрированиеКластераRASКлиентСервер</CommonModule>
-			<CommonModule>АдминистрированиеКластераКлиентСервер</CommonModule>
-			<CommonModule>АнализЖурналаРегистрацииКлиент</CommonModule>
-			<CommonModule>АнализЖурналаРегистрацииСлужебный</CommonModule>
-			<CommonModule>БлокировкаРаботыСВнешнимиРесурсами</CommonModule>
-			<CommonModule>БлокировкаРаботыСВнешнимиРесурсамиПереопределяемый</CommonModule>
-			<CommonModule>ВариантыОтчетов</CommonModule>
-			<CommonModule>ВариантыОтчетовВызовСервера</CommonModule>
-			<CommonModule>ВариантыОтчетовКлиент</CommonModule>
+			<CommonModule>ОбновлениеСервер</CommonModule>
 			<CommonModule>ВариантыОтчетовКлиентСервер</CommonModule>
 			<CommonModule>ВариантыОтчетовПереопределяемый</CommonModule>
-			<CommonModule>ВариантыОтчетовПовтИсп</CommonModule>
-			<CommonModule>ВариантыОтчетовСлужебный</CommonModule>
-			<CommonModule>ВариантыОтчетовСлужебныйКлиент</CommonModule>
-			<CommonModule>ВариантыОтчетовСлужебныйКлиентСервер</CommonModule>
-			<CommonModule>ВнешниеПользователи</CommonModule>
-			<CommonModule>ВнешниеПользователиКлиент</CommonModule>
-			<CommonModule>ГрафикиРаботы</CommonModule>
-			<CommonModule>ГрафикиРаботыКлиент</CommonModule>
-			<CommonModule>ДлительныеОперации</CommonModule>
-			<CommonModule>ДлительныеОперацииВызовСервера</CommonModule>
-			<CommonModule>ДлительныеОперацииГлобальный</CommonModule>
-			<CommonModule>ДлительныеОперацииКлиент</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработки</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиВАвтономномРежиме</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиВБезопасномРежимеСлужебный</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиВМоделиСервиса</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиВМоделиСервисаМанифест</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиВМоделиСервисаМанифестИнтерфейс</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиВМоделиСервисаПовтИсп</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиВызовСервера</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиКлиент</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиКлиентПереопределяемый</CommonModule>
 			<CommonModule>ДополнительныеОтчетыИОбработкиКлиентСервер</CommonModule>
 			<CommonModule>ДополнительныеОтчетыИОбработкиПереопределяемый</CommonModule>
 			<CommonModule>ДополнительныеОтчетыИОбработкиПовтИсп</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиРегламентныеЗаданияВМоделиСервиса</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиКлиентПереопределяемый</CommonModule>
 			<CommonModule>ЖурналРегистрации</CommonModule>
 			<CommonModule>ЖурналРегистрацииВызовСервера</CommonModule>
 			<CommonModule>ЖурналРегистрацииКлиент</CommonModule>
 			<CommonModule>ЗаполнениеОбъектов</CommonModule>
 			<CommonModule>ЗаполнениеОбъектовПереопределяемый</CommonModule>
-			<CommonModule>ЗД_Модуль_oscript_Привелегированный</CommonModule>
-			<CommonModule>ЗД_Сериализация</CommonModule>
 			<CommonModule>ИнтеграцияПодсистемБСП</CommonModule>
 			<CommonModule>ИнтеграцияПодсистемБСПКлиент</CommonModule>
 			<CommonModule>ИнтеграцияПодсистемБСПКлиентПовтИсп</CommonModule>
@@ -695,12 +652,10 @@
 			<CommonModule>КалендарныеГрафики</CommonModule>
 			<CommonModule>КалендарныеГрафикиПереопределяемый</CommonModule>
 			<CommonModule>КалендарныеГрафикиСлужебный</CommonModule>
-			<CommonModule>КонвертацияХранилища</CommonModule>
 			<CommonModule>КонструкторФормул</CommonModule>
 			<CommonModule>КонструкторФормулКлиент</CommonModule>
 			<CommonModule>КонструкторФормулКлиентСервер</CommonModule>
 			<CommonModule>КонструкторФормулСлужебный</CommonModule>
-			<CommonModule>МодульRAC</CommonModule>
 			<CommonModule>НапоминанияПользователя</CommonModule>
 			<CommonModule>НапоминанияПользователяВызовСервера</CommonModule>
 			<CommonModule>НапоминанияПользователяГлобальный</CommonModule>
@@ -711,10 +666,10 @@
 			<CommonModule>НапоминанияПользователяСлужебный</CommonModule>
 			<CommonModule>НастройкаПорядкаЭлементов</CommonModule>
 			<CommonModule>НастройкаПорядкаЭлементовСлужебный</CommonModule>
-			<CommonModule>НастройкаРазрешенийНаИспользованиеВнешнихРесурсовВызовСервера</CommonModule>
-			<CommonModule>НастройкаРазрешенийНаИспользованиеВнешнихРесурсовГлобальный</CommonModule>
-			<CommonModule>НастройкаРазрешенийНаИспользованиеВнешнихРесурсовКлиент</CommonModule>
-			<CommonModule>НастройкиПрограммыПереопределяемый</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиВБезопасномРежимеСлужебный</CommonModule>
+			<CommonModule>АнализЖурналаРегистрацииСлужебный</CommonModule>
+			<CommonModule>ВариантыОтчетовПовтИсп</CommonModule>
+			<CommonModule>ГрафикиРаботыКлиент</CommonModule>
 			<CommonModule>ОбновлениеИнформационнойБазы</CommonModule>
 			<CommonModule>ОбновлениеИнформационнойБазыБСП</CommonModule>
 			<CommonModule>ОбновлениеИнформационнойБазыВызовСервера</CommonModule>
@@ -729,7 +684,6 @@
 			<CommonModule>ОбновлениеКонфигурации</CommonModule>
 			<CommonModule>ОбновлениеКонфигурацииВызовСервера</CommonModule>
 			<CommonModule>ОбновлениеКонфигурацииКлиент</CommonModule>
-			<CommonModule>ОбновлениеСервер</CommonModule>
 			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonModule>ОбщегоНазначенияВызовСервера</CommonModule>
 			<CommonModule>ОбщегоНазначенияГлобальный</CommonModule>
@@ -738,23 +692,13 @@
 			<CommonModule>ОбщегоНазначенияКлиентПовтИсп</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияПереопределяемый</CommonModule>
-			<CommonModule>ОбщегоНазначенияПовтИсп</CommonModule>
 			<CommonModule>ОбщегоНазначенияСлужебныйКлиент</CommonModule>
 			<CommonModule>ОбщегоНазначенияСлужебныйКлиентСервер</CommonModule>
 			<CommonModule>ОтчетыКлиент</CommonModule>
 			<CommonModule>ОтчетыКлиентПереопределяемый</CommonModule>
 			<CommonModule>ОтчетыКлиентСервер</CommonModule>
-			<CommonModule>ОтчетыОбОшибкахСервер</CommonModule>
 			<CommonModule>ОтчетыПереопределяемый</CommonModule>
 			<CommonModule>ОтчетыСервер</CommonModule>
-			<CommonModule>ОценкаПроизводительности</CommonModule>
-			<CommonModule>ОценкаПроизводительностиВызовСервера</CommonModule>
-			<CommonModule>ОценкаПроизводительностиВызовСервераПовтИсп</CommonModule>
-			<CommonModule>ОценкаПроизводительностиГлобальный</CommonModule>
-			<CommonModule>ОценкаПроизводительностиКлиент</CommonModule>
-			<CommonModule>ОценкаПроизводительностиКлиентСервер</CommonModule>
-			<CommonModule>ОценкаПроизводительностиПовтИсп</CommonModule>
-			<CommonModule>ОценкаПроизводительностиСлужебный</CommonModule>
 			<CommonModule>ПодключаемыеКоманды</CommonModule>
 			<CommonModule>ПодключаемыеКомандыВызовСервера</CommonModule>
 			<CommonModule>ПодключаемыеКомандыКлиент</CommonModule>
@@ -776,11 +720,11 @@
 			<CommonModule>ПользователиСлужебныйКлиент</CommonModule>
 			<CommonModule>ПользователиСлужебныйКлиентСервер</CommonModule>
 			<CommonModule>ПользователиСлужебныйПовтИсп</CommonModule>
-			<CommonModule>РаботаВБезопасномРежиме</CommonModule>
-			<CommonModule>РаботаВБезопасномРежимеКлиент</CommonModule>
-			<CommonModule>РаботаВБезопасномРежимеКлиентПереопределяемый</CommonModule>
-			<CommonModule>РаботаВБезопасномРежимеПереопределяемый</CommonModule>
-			<CommonModule>РаботаВБезопасномРежимеСлужебный</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиВызовСервера</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиКлиент</CommonModule>
+			<CommonModule>АдминистрированиеКластераCOMКлиентСервер</CommonModule>
+			<CommonModule>ВариантыОтчетовСлужебныйКлиент</CommonModule>
+			<CommonModule>БлокировкаРаботыСВнешнимиРесурсами</CommonModule>
 			<CommonModule>РаботаВМоделиСервисаБСП</CommonModule>
 			<CommonModule>РаботаСАдресами</CommonModule>
 			<CommonModule>РаботаСАдресамиКлиент</CommonModule>
@@ -803,22 +747,21 @@
 			<CommonModule>РегламентныеЗаданияПереопределяемый</CommonModule>
 			<CommonModule>РегламентныеЗаданияСервер</CommonModule>
 			<CommonModule>РегламентныеЗаданияСлужебный</CommonModule>
-			<CommonModule>РеестрПроцедурСервер</CommonModule>
-			<CommonModule>СоединенияИБ</CommonModule>
-			<CommonModule>СоединенияИБВызовСервера</CommonModule>
-			<CommonModule>СоединенияИБГлобальный</CommonModule>
-			<CommonModule>СоединенияИБКлиент</CommonModule>
-			<CommonModule>СоединенияИБКлиентСервер</CommonModule>
-			<CommonModule>СоединенияИБПереопределяемый</CommonModule>
+			<CommonModule>АдминистрированиеКластераRAS</CommonModule>
+			<CommonModule>АнализЖурналаРегистрацииКлиент</CommonModule>
+			<CommonModule>АдминистрированиеКластераCOM</CommonModule>
+			<CommonModule>ДлительныеОперацииГлобальный</CommonModule>
+			<CommonModule>АдминистрированиеКластераКлиентСервер</CommonModule>
+			<CommonModule>ВариантыОтчетовСлужебный</CommonModule>
 			<CommonModule>СозданиеНаОсновании</CommonModule>
 			<CommonModule>СозданиеНаОснованииПереопределяемый</CommonModule>
 			<CommonModule>СозданиеНаОснованииПовтИсп</CommonModule>
-			<CommonModule>СообщенияКонтрольДополнительныхОтчетовИОбработокИнтерфейс</CommonModule>
-			<CommonModule>СообщенияКонтрольДополнительныхОтчетовИОбработокОбработчикТрансляции_1_0_0_1</CommonModule>
-			<CommonModule>СообщенияУправленияДОИООбработчикСообщения_1_0_1_1</CommonModule>
-			<CommonModule>СообщенияУправленияДОИООбработчикСообщения_1_0_1_2</CommonModule>
-			<CommonModule>СообщенияУправленияДополнительнымиОтчетамиИОбработкамиИнтерфейс</CommonModule>
-			<CommonModule>СообщенияУправленияДополнительнымиОтчетамиИОбработкамиРеализация</CommonModule>
+			<CommonModule>БлокировкаРаботыСВнешнимиРесурсамиПереопределяемый</CommonModule>
+			<CommonModule>ВариантыОтчетов</CommonModule>
+			<CommonModule>ВнешниеПользователи</CommonModule>
+			<CommonModule>ВнешниеПользователиКлиент</CommonModule>
+			<CommonModule>ВариантыОтчетовВызовСервера</CommonModule>
+			<CommonModule>ВариантыОтчетовКлиент</CommonModule>
 			<CommonModule>СтандартныеПодсистемыВызовСервера</CommonModule>
 			<CommonModule>СтандартныеПодсистемыГлобальный</CommonModule>
 			<CommonModule>СтандартныеПодсистемыКлиент</CommonModule>
@@ -830,10 +773,10 @@
 			<CommonModule>СтроковыеФункцииКлиент</CommonModule>
 			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
 			<CommonModule>СтроковыеФункцииКлиентСерверРФ</CommonModule>
-			<CommonModule>ТекущиеДелаПереопределяемый</CommonModule>
-			<CommonModule>ТекущиеДелаСервер</CommonModule>
-			<CommonModule>ТекущиеДелаСлужебный</CommonModule>
-			<CommonModule>ТекущиеДелаСлужебныйПовтИсп</CommonModule>
+			<CommonModule>ГрафикиРаботы</CommonModule>
+			<CommonModule>ДлительныеОперации</CommonModule>
+			<CommonModule>ДлительныеОперацииВызовСервера</CommonModule>
+			<CommonModule>ДлительныеОперацииКлиент</CommonModule>
 			<CommonModule>УдалениеПомеченныхОбъектов</CommonModule>
 			<CommonModule>УдалениеПомеченныхОбъектовКлиент</CommonModule>
 			<CommonModule>УдалениеПомеченныхОбъектовПереопределяемый</CommonModule>
@@ -868,9 +811,40 @@
 			<CommonModule>ШаблоныСообщенийСервер</CommonModule>
 			<CommonModule>ШаблоныСообщенийСлужебный</CommonModule>
 			<CommonModule>ШаблоныСообщенийСлужебныйПовтИсп</CommonModule>
-			<CommonModule>ДФИ</CommonModule>
-			<CommonModule>DatareonЧтениеЛогов</CommonModule>
-			<CommonModule>DatareonЧтениеЛоговВызовСервера</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиВАвтономномРежиме</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиВМоделиСервиса</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиВМоделиСервисаМанифест</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиВМоделиСервисаМанифестИнтерфейс</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиВМоделиСервисаПовтИсп</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиРегламентныеЗаданияВМоделиСервиса</CommonModule>
+			<CommonModule>НастройкаРазрешенийНаИспользованиеВнешнихРесурсовВызовСервера</CommonModule>
+			<CommonModule>НастройкаРазрешенийНаИспользованиеВнешнихРесурсовГлобальный</CommonModule>
+			<CommonModule>НастройкаРазрешенийНаИспользованиеВнешнихРесурсовКлиент</CommonModule>
+			<CommonModule>НастройкиПрограммыПереопределяемый</CommonModule>
+			<CommonModule>РаботаВБезопасномРежиме</CommonModule>
+			<CommonModule>РаботаВБезопасномРежимеКлиент</CommonModule>
+			<CommonModule>РаботаВБезопасномРежимеКлиентПереопределяемый</CommonModule>
+			<CommonModule>РаботаВБезопасномРежимеПереопределяемый</CommonModule>
+			<CommonModule>РаботаВБезопасномРежимеСлужебный</CommonModule>
+			<CommonModule>СоединенияИБ</CommonModule>
+			<CommonModule>СоединенияИБВызовСервера</CommonModule>
+			<CommonModule>СоединенияИБГлобальный</CommonModule>
+			<CommonModule>СоединенияИБКлиент</CommonModule>
+			<CommonModule>СоединенияИБКлиентСервер</CommonModule>
+			<CommonModule>СоединенияИБПереопределяемый</CommonModule>
+			<CommonModule>СообщенияКонтрольДополнительныхОтчетовИОбработокИнтерфейс</CommonModule>
+			<CommonModule>СообщенияКонтрольДополнительныхОтчетовИОбработокОбработчикТрансляции_1_0_0_1</CommonModule>
+			<CommonModule>СообщенияУправленияДОИООбработчикСообщения_1_0_1_1</CommonModule>
+			<CommonModule>СообщенияУправленияДОИООбработчикСообщения_1_0_1_2</CommonModule>
+			<CommonModule>СообщенияУправленияДополнительнымиОтчетамиИОбработкамиИнтерфейс</CommonModule>
+			<CommonModule>СообщенияУправленияДополнительнымиОтчетамиИОбработкамиРеализация</CommonModule>
+			<CommonModule>ТекущиеДелаПереопределяемый</CommonModule>
+			<CommonModule>ТекущиеДелаСервер</CommonModule>
+			<CommonModule>ТекущиеДелаСлужебный</CommonModule>
+			<CommonModule>ТекущиеДелаСлужебныйПовтИсп</CommonModule>
+			<CommonModule>ЗД_Модуль_oscript_Привелегированный</CommonModule>
+			<CommonModule>ЗД_Сериализация</CommonModule>
+			<CommonModule>SQLВыполнениеЗаданий</CommonModule>
 			<CommonAttribute>ОбластьДанныхВспомогательныеДанные</CommonAttribute>
 			<CommonAttribute>ОбластьДанныхОсновныеДанные</CommonAttribute>
 			<ExchangePlan>ОбновлениеИнформационнойБазы</ExchangePlan>
@@ -889,12 +863,7 @@
 			<XDTOPackage>ApplicationExtensionsManifest_1_0_0_2</XDTOPackage>
 			<XDTOPackage>ApplicationPermissions_1_0_0_1</XDTOPackage>
 			<XDTOPackage>ApplicationPermissions_1_0_0_2</XDTOPackage>
-			<XDTOPackage>ApdexExport</XDTOPackage>
-			<XDTOPackage>ApdexExport_1_0_0_2</XDTOPackage>
-			<XDTOPackage>ApdexExport_1_0_0_3</XDTOPackage>
-			<XDTOPackage>ApdexExport_1_0_0_4</XDTOPackage>
 			<WebService>InterfaceVersion</WebService>
-			<HTTPService>ОсновнойСервис</HTTPService>
 			<EventSubscription>ВариантыОтчетовПередУдалениемИдентификатораОбъектаМетаданных</EventSubscription>
 			<EventSubscription>ВариантыОтчетовПриУдаленииПользователя</EventSubscription>
 			<EventSubscription>ВключитьРегламентноеЗаданиеПриИзмененииФункциональнойОпции</EventSubscription>
@@ -951,17 +920,6 @@
 			<ScheduledJob>УдалениеПомеченных</ScheduledJob>
 			<ScheduledJob>УдалениеУстаревшихПараметровРаботыВерсийРасширений</ScheduledJob>
 			<ScheduledJob>SQLВыполнениеЗаданий</ScheduledJob>
-			<ScheduledJob>СборСтатистикиСервераSQL</ScheduledJob>
-			<ScheduledJob>ОчисткаЗамеровВремени</ScheduledJob>
-			<ScheduledJob>ЭкспортОценкиПроизводительности</ScheduledJob>
-			<ScheduledJob>ИмпортОценкиПроизводительности</ScheduledJob>
-			<ScheduledJob>ОбработатьПолученныеОтчетыОбОшибках</ScheduledJob>
-			<ScheduledJob>ПодготовкаАвтоТеста</ScheduledJob>
-			<ScheduledJob>SQLУстановитьЗавершениеЗаданий</ScheduledJob>
-			<ScheduledJob>УсечениеЖурналаРегиcтрации</ScheduledJob>
-			<ScheduledJob>ПодготовкаDCT</ScheduledJob>
-			<ScheduledJob>УдалитьУстаревшиеДанные</ScheduledJob>
-			<ScheduledJob>ЗаполнитьРегистрыОчередиDatareon</ScheduledJob>
 			<SettingsStorage>ХранилищеВариантовОтчетов</SettingsStorage>
 			<FunctionalOption>ИспользоватьВнешнихПользователей</FunctionalOption>
 			<FunctionalOption>ИспользоватьДополнительныеОбработкиСозданияСвязанныхОбъектов</FunctionalOption>
@@ -1037,7 +995,6 @@
 			<CommonCommand>СменитьПароль</CommonCommand>
 			<CommonCommand>СозданиеСвязанныхОбъектов</CommonCommand>
 			<CommonCommand>УстановитьРасширениеДляРаботыС1СПредприятием</CommonCommand>
-			<CommonCommand>КонсольСеансов</CommonCommand>
 			<CommandGroup>Информация</CommandGroup>
 			<CommandGroup>Органайзер</CommandGroup>
 			<Constant>АвтоматическиНастраиватьРазрешенияВПрофиляхБезопасности</Constant>
@@ -1089,22 +1046,6 @@
 			<Constant>ПрофильБезопасностиИнформационнойБазы</Constant>
 			<Constant>РазрешитьВыполнениеДООРегламентнымиЗаданиямиВМоделиСервиса</Constant>
 			<Constant>ЗД_ПутьДо_oscript</Constant>
-			<Constant>SQLЗаданиеКоличествоПопыток</Constant>
-			<Constant>ЗД_ИБПоУмолчанию</Constant>
-			<Constant>ВыполнятьЗамерыПроизводительности</Constant>
-			<Constant>ДатаПоследнейВыгрузкиЗамеровПроизводительностиUTC</Constant>
-			<Constant>КоличествоЗамеровВПакетеЭкспорта</Constant>
-			<Constant>ОценкаПроизводительностиПериодЗаписи</Constant>
-			<Constant>ПериодХраненияЗамеров</Constant>
-			<Constant>ЗД_ПапкаФайлов_apdex</Constant>
-			<Constant>ОтчетыОбОшибкахОтправлятьJira</Constant>
-			<Constant>ИтерацияЗагрузкиРеестраПроцедур</Constant>
-			<Constant>АвтономныйСерверВерсия1С</Constant>
-			<Constant>АвтономныйСерверДанныеКластера</Constant>
-			<Constant>АвтономныйСерверПутьВыгрузки</Constant>
-			<Constant>АвтономныйСерверПутьКонфигурации</Constant>
-			<Constant>ПутьDatabaseCompressionTool</Constant>
-			<Constant>ксКоличествоОшибокДляОповещения</Constant>
 			<CommonForm>АутентификацияВСервисе</CommonForm>
 			<CommonForm>ФормаКонстант</CommonForm>
 			<CommonForm>ВводЗначенийСпискомСФлажками</CommonForm>
@@ -1150,65 +1091,38 @@
 			<CommonForm>ФормаНастроекОтчета</CommonForm>
 			<CommonForm>ФормаОтчета</CommonForm>
 			<CommonForm>ПараметрыАдминистрированияПрограммы</CommonForm>
-			<CommonForm>здРедактированиеВыражения</CommonForm>
-			<CommonForm>УКО_ВставкаСсылкиНаОбъектБД</CommonForm>
-			<Catalog>SQLDBРабочие</Catalog>
-			<Catalog>SQLDBТестовые</Catalog>
-			<Catalog>SQLЗадания</Catalog>
-			<Catalog>SQLСервера</Catalog>
-			<Catalog>АнализОшибок</Catalog>
 			<Catalog>ВариантыОтчетов</Catalog>
 			<Catalog>ВерсииРасширений</Catalog>
-			<Catalog>ВерсииХранилища</Catalog>
 			<Catalog>ВидыКонтактнойИнформации</Catalog>
 			<Catalog>ВнешниеПользователи</Catalog>
 			<Catalog>ГруппыВнешнихПользователей</Catalog>
 			<Catalog>ГруппыДоступа</Catalog>
 			<Catalog>ГруппыПользователей</Catalog>
 			<Catalog>ДополнительныеОтчетыИОбработки</Catalog>
-			<Catalog>зд_АналитикаJira</Catalog>
 			<Catalog>ЗД_ИнформационныеБазы</Catalog>
 			<Catalog>ЗД_Скрипты</Catalog>
 			<Catalog>ЗД_Хранилища</Catalog>
-			<Catalog>здПлатформы1С</Catalog>
 			<Catalog>ИдентификаторыОбъектовМетаданных</Catalog>
 			<Catalog>ИдентификаторыОбъектовРасширений</Catalog>
 			<Catalog>Календари</Catalog>
-			<Catalog>КлючевыеОперации</Catalog>
 			<Catalog>КлючиДоступа</Catalog>
-			<Catalog>Конфигурация</Catalog>
-			<Catalog>кс_Сценарии</Catalog>
-			<Catalog>ксМусорныеСлова</Catalog>
-			<Catalog>ксОшибкиТестов</Catalog>
-			<Catalog>ксТесты</Catalog>
-			<Catalog>Методы</Catalog>
 			<Catalog>НаборыГруппДоступа</Catalog>
 			<Catalog>Пользователи</Catalog>
-			<Catalog>Пользователи1С</Catalog>
-			<Catalog>ПользователиЭталоннойБазы</Catalog>
 			<Catalog>ПользовательскиеНастройкиОтчетов</Catalog>
 			<Catalog>ПоставляемыеДополнительныеОтчетыИОбработки</Catalog>
 			<Catalog>ПредопределенныеВариантыОтчетов</Catalog>
 			<Catalog>ПредопределенныеВариантыОтчетовРасширений</Catalog>
-			<Catalog>ПриродаОшибки</Catalog>
 			<Catalog>ПроизводственныеКалендари</Catalog>
 			<Catalog>ПрофилиГруппДоступа</Catalog>
-			<Catalog>ПрофилиКлючевыхОпераций</Catalog>
 			<Catalog>РассылкиОтчетов</Catalog>
-			<Catalog>РегламентныеЗадания</Catalog>
 			<Catalog>СтраныМира</Catalog>
-			<Catalog>ТаблицыМетаданных</Catalog>
 			<Catalog>УчетныеЗаписиЭлектроннойПочты</Catalog>
 			<Catalog>ШаблоныСообщений</Catalog>
 			<Catalog>ШаблоныСообщенийПрисоединенныеФайлы</Catalog>
-			<Catalog>ЭлементКонфигурации</Catalog>
-			<Catalog>ксКартаКомпетенцийСотрудника</Catalog>
-			<Catalog>ксСертификатыКурсы</Catalog>
-			<Catalog>ксРазделыКартыКомпетенций</Catalog>
-			<Document>ОтчетыОбОшибках</Document>
-			<Document>Коммит</Document>
-			<Document>ОшибкиТестирования</Document>
-			<Document>ОтработанноеВремя</Document>
+			<Catalog>SQLСервера</Catalog>
+			<Catalog>SQLЗадания</Catalog>
+			<Catalog>SQLDBРабочие</Catalog>
+			<Catalog>SQLDBТестовые</Catalog>
 			<Enum>ВариантыПериода</Enum>
 			<Enum>ВариантыПубликацииДополнительныхОтчетовИОбработок</Enum>
 			<Enum>ДополнительныеЗначенияДоступа</Enum>
@@ -1234,14 +1148,6 @@
 			<Enum>ПричиныОтключенияДополнительныхОтчетовИОбработокВМоделиСервиса</Enum>
 			<Enum>СостоянияЗапросовНаИспользованиеВнешнихРесурсов</Enum>
 			<Enum>ЗД_ТипСкрипта</Enum>
-			<Enum>УровниПроизводительности</Enum>
-			<Enum>ТипыМетодов</Enum>
-			<Enum>зд_ТипПараметра</Enum>
-			<Enum>ТипКода</Enum>
-			<Enum>ксВажностьМетаданных</Enum>
-			<Enum>status</Enum>
-			<Enum>sqlТипыЗаданий</Enum>
-			<Enum>Конфигурации1С</Enum>
 			<Report>АнализЖурналаРегистрации</Report>
 			<Report>АнализПравДоступа</Report>
 			<Report>ПраваДоступа</Report>
@@ -1250,21 +1156,6 @@
 			<Report>СведенияОПользователях</Report>
 			<Report>УниверсальныйОтчет</Report>
 			<Report>ИспользуемыеВнешниеРесурсы</Report>
-			<Report>СтатистикаФрагментацииРазмераТаблиц</Report>
-			<Report>ОценкаПроизводительности</Report>
-			<Report>ЛицензииСтатистика</Report>
-			<Report>Аналитика</Report>
-			<Report>кстСтатистикаОшибок</Report>
-			<Report>кстСтатистикаОшибокПоТестам</Report>
-			<Report>ПоказателиJiraNew</Report>
-			<Report>РегламентныеЗаданияВыполненныеСОшибками</Report>
-			<Report>ПоказателиJiraKPIПФ_2006</Report>
-			<Report>кстВерсииХранилищ</Report>
-			<Report>jira_отражение_часов</Report>
-			<Report>ОстатокОтработаныхЧасов</Report>
-			<Report>jira_SD_DEV</Report>
-			<Report>jira_SD_DEV_аналитика</Report>
-			<Report>Экспертиза</Report>
 			<DataProcessor>КонсольЗаданий</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
 			<DataProcessor>ВыгрузкаЗагрузкаДанныхСверткаСсылокНаПользователейВРазделенныхДанных</DataProcessor>
@@ -1288,13 +1179,6 @@
 			<DataProcessor>ПанельАдминистрированияБСП</DataProcessor>
 			<DataProcessor>ТекущиеДела</DataProcessor>
 			<DataProcessor>ЗапускЗаданияSQL</DataProcessor>
-			<DataProcessor>ОбработатьПолученныеОтчетыОбОшибках</DataProcessor>
-			<DataProcessor>ОценкаПроизводительности</DataProcessor>
-			<DataProcessor>ОбработкаBSLФайлов</DataProcessor>
-			<DataProcessor>КонструкторКоманднойСтроки</DataProcessor>
-			<DataProcessor>МониторRAC</DataProcessor>
-			<DataProcessor>ОтладкаВыгрузкиЗагрузки</DataProcessor>
-			<DataProcessor>Отладка_СформироватьОтчетПоВерсиямХранилища</DataProcessor>
 			<InformationRegister>БезопасноеХранилищеДанных</InformationRegister>
 			<InformationRegister>ЖурналЗапускаСкриптов</InformationRegister>
 			<InformationRegister>ГруппыЗначенийДоступа</InformationRegister>
@@ -1353,34 +1237,6 @@
 			<InformationRegister>РежимыПодключенияВнешнихМодулей</InformationRegister>
 			<InformationRegister>SQLПравоЗапускаЗаданий</InformationRegister>
 			<InformationRegister>SQLВыполнениеЗаданий</InformationRegister>
-			<InformationRegister>ПолученныеОтчетыОбОшибках</InformationRegister>
-			<InformationRegister>СтатистикаСоединенийMSSQL</InformationRegister>
-			<InformationRegister>ЗамерыВремени</InformationRegister>
-			<InformationRegister>ЗамерыВремениТехнологические</InformationRegister>
-			<InformationRegister>ЗД_ЗагруженныеФайлыЗамеров</InformationRegister>
-			<InformationRegister>ФайлыBSL</InformationRegister>
-			<InformationRegister>зд_АктуальнаяПлатформа</InformationRegister>
-			<InformationRegister>ОбращенияКМетодам</InformationRegister>
-			<InformationRegister>ксЛицензии1С</InformationRegister>
-			<InformationRegister>КэшТаблицыОшибок</InformationRegister>
-			<InformationRegister>ЗапускЗаданияSQLЗначенияПоУмолчанию</InformationRegister>
-			<InformationRegister>РаботаРегламентныхЗаданий</InformationRegister>
-			<InformationRegister>РаботаФоновыхЗаданий</InformationRegister>
-			<InformationRegister>ксСеансы</InformationRegister>
-			<InformationRegister>ксСоединения</InformationRegister>
-			<InformationRegister>ксИнформационныеБазы</InformationRegister>
-			<InformationRegister>ксПроцессы</InformationRegister>
-			<InformationRegister>ксКластеры</InformationRegister>
-			<InformationRegister>ксСеансыSQL</InformationRegister>
-			<InformationRegister>ксИндикаторы</InformationRegister>
-			<InformationRegister>ксПовторяющиесяОшибки</InformationRegister>
-			<InformationRegister>ГлубинаХранения</InformationRegister>
-			<InformationRegister>DatareonТипыДанных</InformationRegister>
-			<InformationRegister>DatareonЛогиОчередь</InformationRegister>
-			<AccumulationRegister>РН_ОтработанноеВремя</AccumulationRegister>
-			<ExternalDataSource>кст_Jira_sql</ExternalDataSource>
-			<ExternalDataSource>ks_tech</ExternalDataSource>
-			<ExternalDataSource>clickhouse</ExternalDataSource>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

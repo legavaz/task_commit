@@ -905,7 +905,7 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаОценкаПроизводительности" id="2245">
+		<UsualGroup name="ГруппаОценкаПроизводительности" id="1598">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -917,9 +917,9 @@
 			<ControlRepresentation>Picture</ControlRepresentation>
 			<Representation>NormalSeparation</Representation>
 			<ChildItemsWidth>Equal</ChildItemsWidth>
-			<ExtendedTooltip name="ГруппаОценкаПроизводительностиExtendedTooltip" id="2246"/>
+			<ExtendedTooltip name="ГруппаОценкаПроизводительностиExtendedTooltip" id="1672"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаВыполнятьЗамерыПроизводительности" id="2247">
+				<UsualGroup name="ГруппаВыполнятьЗамерыПроизводительности" id="1589">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -931,10 +931,9 @@
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаВыполнятьЗамерыПроизводительностиExtendedTooltip" id="2248"/>
+					<ExtendedTooltip name="ГруппаВыполнятьЗамерыПроизводительностиExtendedTooltip" id="1673"/>
 					<ChildItems>
-						<CheckBoxField name="ВыполнятьЗамерыПроизводительности" id="2249">
-							<DataPath>НаборКонстант.ВыполнятьЗамерыПроизводительности</DataPath>
+						<CheckBoxField name="ВыполнятьЗамерыПроизводительности" id="1590">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -944,8 +943,8 @@
 							<TitleLocation>Right</TitleLocation>
 							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ВыполнятьЗамерыПроизводительностиКонтекстноеМеню" id="2250"/>
-							<ExtendedTooltip name="ВыполнятьЗамерыПроизводительностиExtendedTooltip" id="2251">
+							<ContextMenu name="ВыполнятьЗамерыПроизводительностиКонтекстноеМеню" id="1591"/>
+							<ExtendedTooltip name="ВыполнятьЗамерыПроизводительностиExtendedTooltip" id="1674">
 								<AutoMaxWidth>false</AutoMaxWidth>
 								<Title formatted="false">
 									<v8:item>
@@ -958,45 +957,11 @@
 								<Event name="OnChange">ВыполнятьЗамерыПроизводительностиПриИзменении</Event>
 							</Events>
 						</CheckBoxField>
-						<UsualGroup name="Группа1" id="2267">
-							<Group>AlwaysHorizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2268"/>
-							<ChildItems>
-								<InputField name="КаталогЗагрузкиAPDEX" id="2262">
-									<DataPath>НаборКонстант.ЗД_ПапкаФайлов_apdex</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Папка импорта данных APDEX</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>Top</TitleLocation>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="КаталогЗагрузкиAPDEXКонтекстноеМеню" id="2263"/>
-									<ExtendedTooltip name="КаталогЗагрузкиAPDEXРасширеннаяПодсказка" id="2264">
-										<AutoMaxWidth>false</AutoMaxWidth>
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Каталог импорта данных выгруженных из ERP</v8:content>
-											</v8:item>
-										</Title>
-									</ExtendedTooltip>
-								</InputField>
-								<Button name="Загрузить" id="2269">
-									<Type>Hyperlink</Type>
-									<CommandName>Form.Command.Загрузить</CommandName>
-									<ExtendedTooltip name="ЗагрузитьРасширеннаяПодсказка" id="2270"/>
-								</Button>
-							</ChildItems>
-						</UsualGroup>
-						<Button name="СправочникПрофилиКлючевыхОперацийОткрытьСписок" id="2252">
+						<Button name="СправочникПрофилиКлючевыхОперацийОткрытьСписок" id="2217">
 							<Type>Hyperlink</Type>
-							<CommandName>Catalog.ПрофилиКлючевыхОпераций.StandardCommand.OpenList</CommandName>
+							<CommandName>0</CommandName>
 							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<ExtendedTooltip name="СправочникПрофилиКлючевыхОперацийОткрытьСписокРасширеннаяПодсказка" id="2253">
+							<ExtendedTooltip name="СправочникПрофилиКлючевыхОперацийОткрытьСписокРасширеннаяПодсказка" id="2218">
 								<Title formatted="false">
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -1005,20 +970,9 @@
 								</Title>
 							</ExtendedTooltip>
 						</Button>
-						<Button name="ОткрытьСписокФайлов" id="2265">
-							<Type>Hyperlink</Type>
-							<CommandName>Form.Command.ОткрытьСписокФайлов</CommandName>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Загруженные замеры apdex</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ОткрытьСписокФайловРасширеннаяПодсказка" id="2266"/>
-						</Button>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаОбработкаОценкаПроизводительности" id="2254">
+				<UsualGroup name="ГруппаОбработкаОценкаПроизводительности" id="1594">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1030,11 +984,11 @@
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаОбработкаОценкаПроизводительностиExtendedTooltip" id="2255"/>
+					<ExtendedTooltip name="ГруппаОбработкаОценкаПроизводительностиExtendedTooltip" id="1676"/>
 					<ChildItems>
-						<Button name="ОбработкаНастройкиОценкиПроизводительности" id="2256">
+						<Button name="ОбработкаНастройкиОценкиПроизводительности" id="1946">
 							<Type>Hyperlink</Type>
-							<CommandName>DataProcessor.ОценкаПроизводительности.Command.НастройкиОценкиПроизводительности</CommandName>
+							<CommandName>0</CommandName>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1042,7 +996,7 @@
 								</v8:item>
 							</Title>
 							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<ExtendedTooltip name="ОбработкаНастройкиОценкиПроизводительностиРасширеннаяПодсказка" id="2257">
+							<ExtendedTooltip name="ОбработкаНастройкиОценкиПроизводительностиРасширеннаяПодсказка" id="1947">
 								<Title formatted="false">
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -1051,9 +1005,9 @@
 								</Title>
 							</ExtendedTooltip>
 						</Button>
-						<Button name="ОбработкаОценкаПроизводительностиЭкспортДанных" id="2258">
+						<Button name="ОбработкаОценкаПроизводительностиЭкспортДанных" id="2215">
 							<Type>Hyperlink</Type>
-							<CommandName>DataProcessor.ОценкаПроизводительности.Command.ЭкспортЗамеровПроизводительности</CommandName>
+							<CommandName>0</CommandName>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1061,7 +1015,7 @@
 								</v8:item>
 							</Title>
 							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<ExtendedTooltip name="ОбработкаОценкаПроизводительностиЭкспортДанныхРасширеннаяПодсказка" id="2259">
+							<ExtendedTooltip name="ОбработкаОценкаПроизводительностиЭкспортДанныхРасширеннаяПодсказка" id="2216">
 								<Title formatted="false">
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -1070,9 +1024,9 @@
 								</Title>
 							</ExtendedTooltip>
 						</Button>
-						<Button name="ОбработкаОценкаПроизводительностиИмпортЗамеровПроизводительности" id="2260">
+						<Button name="ОбработкаОценкаПроизводительностиИмпортЗамеровПроизводительности" id="2219">
 							<Type>Hyperlink</Type>
-							<CommandName>DataProcessor.ОценкаПроизводительности.Command.ИмпортЗамеровПроизводительности</CommandName>
+							<CommandName>0</CommandName>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1080,7 +1034,7 @@
 								</v8:item>
 							</Title>
 							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<ExtendedTooltip name="ОбработкаОценкаПроизводительностиИмпортЗамеровПроизводительностиРасширеннаяПодсказка" id="2261">
+							<ExtendedTooltip name="ОбработкаОценкаПроизводительностиИмпортЗамеровПроизводительностиРасширеннаяПодсказка" id="2220">
 								<Title formatted="false">
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -1224,36 +1178,6 @@
 			</ToolTip>
 			<Action>ОтложеннаяОбработкаДанных</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="ОткрытьСписокФайлов" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть список файлов</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть список файлов</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ОткрытьСписокФайлов</Action>
-		</Command>
-		<Command name="Загрузить" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>Загрузить</Action>
 		</Command>
 	</Commands>
 </Form>
