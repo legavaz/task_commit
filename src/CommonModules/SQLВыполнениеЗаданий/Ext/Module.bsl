@@ -301,8 +301,12 @@
 	ЗапросАДО.CommandType=4;
 	ЗапросАДО.CommandTimeout = 300;
 	ЗапросАДО.ActiveConnection = ОЛАПСоединение;
-	ЗапросАДО.Parameters.Item("@job_name").Value="DatabaseRestoreAdm";
+	ЗапросАДО.Parameters.Item("@job_name").Value="DatabaseRestoreAdm";  
+Попытка
 	ЗапросАДО.Execute();
+Исключение
+	ЕстьОшибка = ОписаниеОшибки();
+КонецПопытки;
 
 	ОЛАПСоединение.Close();
 
