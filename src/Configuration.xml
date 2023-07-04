@@ -919,6 +919,7 @@
 			<ScheduledJob>РассылкаОтчетов</ScheduledJob>
 			<ScheduledJob>УдалениеПомеченных</ScheduledJob>
 			<ScheduledJob>УдалениеУстаревшихПараметровРаботыВерсийРасширений</ScheduledJob>
+			<ScheduledJob>SQLВыполнениеЗаданий</ScheduledJob>
 			<SettingsStorage>ХранилищеВариантовОтчетов</SettingsStorage>
 			<FunctionalOption>ИспользоватьВнешнихПользователей</FunctionalOption>
 			<FunctionalOption>ИспользоватьДополнительныеОбработкиСозданияСвязанныхОбъектов</FunctionalOption>
