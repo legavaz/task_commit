@@ -22,9 +22,13 @@
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="РежимОтладкиКонтекстноеМеню" id="43"/>
 			<ExtendedTooltip name="РежимОтладкиРасширеннаяПодсказка" id="44"/>
+			<Events>
+				<Event name="OnChange">РежимОтладкиПриИзменении</Event>
+			</Events>
 		</CheckBoxField>
 		<Button name="SQLВыполнитьЗадание" id="40">
 			<Type>UsualButton</Type>
+			<Visible>false</Visible>
 			<CommandName>Form.Command.SQLВыполнитьЗадание</CommandName>
 			<ExtendedTooltip name="SQLВыполнитьЗаданиеРасширеннаяПодсказка" id="41"/>
 		</Button>
