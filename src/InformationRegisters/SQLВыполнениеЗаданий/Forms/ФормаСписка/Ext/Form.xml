@@ -107,6 +107,16 @@
 					<ContextMenu name="ДатаЗаписиКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ДатаЗаписиРасширеннаяПодсказка" id="27"/>
 				</LabelField>
+				<LabelField name="ОтложеноДо" id="48">
+					<DataPath>Список.ОтложеноДо</DataPath>
+					<ContextMenu name="ОтложеноДоКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ОтложеноДоРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<LabelField name="НачалоВыполнения" id="45">
+					<DataPath>Список.НачалоВыполнения</DataPath>
+					<ContextMenu name="НачалоВыполненияКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="НачалоВыполненияРасширеннаяПодсказка" id="47"/>
+				</LabelField>
 				<LabelField name="ДатаВыполнения" id="28">
 					<DataPath>Список.ДатаВыполнения</DataPath>
 					<DefaultItem>true</DefaultItem>
