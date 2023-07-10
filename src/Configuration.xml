@@ -864,6 +864,7 @@
 			<XDTOPackage>ApplicationPermissions_1_0_0_1</XDTOPackage>
 			<XDTOPackage>ApplicationPermissions_1_0_0_2</XDTOPackage>
 			<WebService>InterfaceVersion</WebService>
+			<HTTPService>ОсновнойСервис</HTTPService>
 			<EventSubscription>ВариантыОтчетовПередУдалениемИдентификатораОбъектаМетаданных</EventSubscription>
 			<EventSubscription>ВариантыОтчетовПриУдаленииПользователя</EventSubscription>
 			<EventSubscription>ВключитьРегламентноеЗаданиеПриИзмененииФункциональнойОпции</EventSubscription>
@@ -1123,6 +1124,7 @@
 			<Catalog>SQLЗадания</Catalog>
 			<Catalog>SQLDBРабочие</Catalog>
 			<Catalog>SQLDBТестовые</Catalog>
+			<Document>ОтчетыОбОшибках</Document>
 			<Enum>ВариантыПериода</Enum>
 			<Enum>ВариантыПубликацииДополнительныхОтчетовИОбработок</Enum>
 			<Enum>ДополнительныеЗначенияДоступа</Enum>
@@ -1179,6 +1181,7 @@
 			<DataProcessor>ПанельАдминистрированияБСП</DataProcessor>
 			<DataProcessor>ТекущиеДела</DataProcessor>
 			<DataProcessor>ЗапускЗаданияSQL</DataProcessor>
+			<DataProcessor>ОбработатьПолученныеОтчетыОбОшибках</DataProcessor>
 			<InformationRegister>БезопасноеХранилищеДанных</InformationRegister>
 			<InformationRegister>ЖурналЗапускаСкриптов</InformationRegister>
 			<InformationRegister>ГруппыЗначенийДоступа</InformationRegister>
@@ -1237,6 +1240,7 @@
 			<InformationRegister>РежимыПодключенияВнешнихМодулей</InformationRegister>
 			<InformationRegister>SQLПравоЗапускаЗаданий</InformationRegister>
 			<InformationRegister>SQLВыполнениеЗаданий</InformationRegister>
+			<InformationRegister>ПолученныеОтчетыОбОшибках</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
