@@ -273,6 +273,7 @@
 			<Subsystem>Администрирование</Subsystem>
 			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
+			<Subsystem>кст_KPI</Subsystem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряРабочийЦвет</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряПраздникЦвет</StyleItem>
@@ -628,6 +629,7 @@
 			<Role>ЧтениеШаблоновСообщений</Role>
 			<Role>ИспользованиеОбработкиТекущиеДела</Role>
 			<Role>ЗапускЗаданийSQL</Role>
+			<Role>ВнешниеИсточникиJira_Чтение</Role>
 			<CommonTemplate>ПолучениеДереваОбработчиковОбновления</CommonTemplate>
 			<CommonModule>АдминистрированиеКластера</CommonModule>
 			<CommonModule>ВариантыОтчетовСлужебныйКлиентСервер</CommonModule>
@@ -1158,6 +1160,7 @@
 			<Report>СведенияОПользователях</Report>
 			<Report>УниверсальныйОтчет</Report>
 			<Report>ИспользуемыеВнешниеРесурсы</Report>
+			<Report>ПоказателиJira</Report>
 			<DataProcessor>КонсольЗаданий</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
 			<DataProcessor>ВыгрузкаЗагрузкаДанныхСверткаСсылокНаПользователейВРазделенныхДанных</DataProcessor>
@@ -1241,6 +1244,7 @@
 			<InformationRegister>SQLПравоЗапускаЗаданий</InformationRegister>
 			<InformationRegister>SQLВыполнениеЗаданий</InformationRegister>
 			<InformationRegister>ПолученныеОтчетыОбОшибках</InformationRegister>
+			<ExternalDataSource>кст_Jira_sql</ExternalDataSource>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
