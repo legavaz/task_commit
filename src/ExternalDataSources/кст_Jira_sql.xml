@@ -29,6 +29,7 @@
 		<ChildObjects>
 			<Table>dbo_users</Table>
 			<Table>dwh_1_jira_issues</Table>
+			<Table>dwh_1_jira_statuses</Table>
 		</ChildObjects>
 	</ExternalDataSource>
 </MetaDataObject>

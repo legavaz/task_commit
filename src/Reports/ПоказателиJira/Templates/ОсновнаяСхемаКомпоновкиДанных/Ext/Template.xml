@@ -111,27 +111,6 @@
 			<field>Количество</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Часы</dataPath>
-			<field>Часы</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Часы</v8:content>
-				</v8:item>
-			</title>
-			<appearance>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Формат</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЧЦ=10; ЧДЦ=2</v8:content>
-						</v8:item>
-					</dcscor:value>
-				</dcscor:item>
-			</appearance>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Активная</dataPath>
 			<field>Активная</field>
 			<title xsi:type="v8:LocalStringType">
@@ -151,6 +130,26 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>День</dataPath>
+			<field>День</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>День</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	НЕДЕЛЯ(ЕСТЬNULL(dwh_1_jira_issues.closed_at, &amp;ТекущаяДата)) КАК Неделя,
@@ -162,7 +161,7 @@
 	dwh_1_jira_issues.issue_summary КАК issue_summary,
 	dwh_1_jira_issues.created_at КАК Создано,
 	ЕСТЬNULL(dwh_1_jira_issues.closed_at, ДАТАВРЕМЯ(1, 1, 1)) КАК Закрыто,
-	РАЗНОСТЬДАТ(dwh_1_jira_issues.created_at, ЕСТЬNULL(dwh_1_jira_issues.created_at, &amp;ТекущаяДата), МИНУТА) / 60 КАК Часы,
+	РАЗНОСТЬДАТ(dwh_1_jira_issues.created_at, ЕСТЬNULL(dwh_1_jira_issues.closed_at, dwh_1_jira_issues.created_at), ДЕНЬ) КАК День,
 	1 КАК Количество,
 	ВЫБОР
 		КОГДА dwh_1_jira_issues.closed_at ЕСТЬ NULL
@@ -173,9 +172,12 @@
 		КОГДА dwh_1_jira_issues.assignee_name В ("arvaninov", "baklanov", "dubakova", "kozhekin", "moseyko", "shapovalova", "stepanov_da", "zykov_gs")
 			ТОГДА "Разработчик"
 		ИНАЧЕ "Прочее"
-	КОНЕЦ КАК Роль
+	КОНЕЦ КАК Роль,
+	dwh_1_jira_statuses.name КАК Статус
 ИЗ
 	ВнешнийИсточникДанных.кст_Jira_sql.Таблица.dwh_1_jira_issues КАК dwh_1_jira_issues
+		ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.кст_Jira_sql.Таблица.dwh_1_jira_statuses КАК dwh_1_jira_statuses
+		ПО dwh_1_jira_issues.status_id = dwh_1_jira_statuses.id
 ГДЕ
 	(dwh_1_jira_issues.created_at МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
 			ИЛИ dwh_1_jira_issues.closed_at МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
@@ -186,8 +188,8 @@
 		<expression>Сумма(количество)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>Часы</dataPath>
-		<expression>Сумма(Часы)</expression>
+		<dataPath>День</dataPath>
+		<expression>Сумма(День)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -284,10 +286,6 @@
 					<dcsset:field>Задача</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:field>status</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>issue_summary</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -297,7 +295,10 @@
 					<dcsset:field>Закрыто</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Часы</dcsset:field>
+					<dcsset:field>Статус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>День</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>количество</dcsset:field>
@@ -348,6 +349,11 @@
 							<v8:content>Активные</v8:content>
 						</v8:item>
 					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Статус</dcsset:left>
+					<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string">Отклонена</dcsset:right>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
@@ -476,12 +482,29 @@
 							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						</dcsset:selection>
 						<dcsset:item>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Статус</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
 							<dcsset:order>
 								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 							</dcsset:order>
 							<dcsset:selection>
 								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 							</dcsset:selection>
+							<dcsset:item>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+							</dcsset:item>
 						</dcsset:item>
 					</dcsset:item>
 				</dcsset:row>

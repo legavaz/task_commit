@@ -19,6 +19,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dbo_users</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_issues</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ПоказателиJira</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_statuses</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
