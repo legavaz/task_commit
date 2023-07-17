@@ -25,6 +25,11 @@
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<InputField name="Наименование" id="192">
+			<DataPath>Объект.Description</DataPath>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="193"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="194"/>
+		</InputField>
 		<Pages name="ГруппаСтраницы" id="102">
 			<Title>
 				<v8:item>
@@ -56,52 +61,6 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="105"/>
 					<ChildItems>
-						<InputField name="Наименование" id="192">
-							<DataPath>Объект.Description</DataPath>
-							<ContextMenu name="НаименованиеКонтекстноеМеню" id="193"/>
-							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="194"/>
-						</InputField>
-						<UsualGroup name="Группа4" id="198">
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="199"/>
-							<ChildItems>
-								<CheckBoxField name="РеглЗаданияАктивность" id="195">
-									<DataPath>Объект.РеглЗаданияАктивность</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Активно</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>None</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="РеглЗаданияАктивностьКонтекстноеМеню" id="196"/>
-									<ExtendedTooltip name="РеглЗаданияАктивностьРасширеннаяПодсказка" id="197"/>
-								</CheckBoxField>
-								<LabelField name="РасписаниеРегЗадания" id="189">
-									<DataPath>РеглЗадание</DataPath>
-									<Hiperlink>true</Hiperlink>
-									<ContextMenu name="РасписаниеРегЗаданияКонтекстноеМеню" id="190"/>
-									<ExtendedTooltip name="РасписаниеРегЗаданияРасширеннаяПодсказка" id="191"/>
-									<Events>
-										<Event name="Click">РасписаниеРегЗаданияНажатие</Event>
-									</Events>
-								</LabelField>
-							</ChildItems>
-						</UsualGroup>
-						<InputField name="ПутьКПлатформе1С" id="84">
-							<DataPath>Объект.ПутьКПлатформе1С</DataPath>
-							<ToolTipRepresentation>Button</ToolTipRepresentation>
-							<BackColor>win:ToolTip</BackColor>
-							<ContextMenu name="ПутьКПлатформе1СКонтекстноеМеню" id="85"/>
-							<ExtendedTooltip name="ПутьКПлатформе1СРасширеннаяПодсказка" id="86"/>
-						</InputField>
-						<InputField name="ПутьКRAC" id="171">
-							<DataPath>Объект.ПутьКRAC</DataPath>
-							<ContextMenu name="ПутьКRACКонтекстноеМеню" id="172"/>
-							<ExtendedTooltip name="ПутьКRACРасширеннаяПодсказка" id="173"/>
-						</InputField>
 						<UsualGroup name="ИБ" id="98">
 							<Title>
 								<v8:item>
@@ -192,13 +151,6 @@
 									<ContextMenu name="ПарольБазыКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="ПарольБазыРасширеннаяПодсказка" id="15"/>
 								</InputField>
-								<InputField name="КодРазрешения" id="25">
-									<DataPath>Объект.КодРазрешения</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<Width>5</Width>
-									<ContextMenu name="КодРазрешенияКонтекстноеМеню" id="26"/>
-									<ExtendedTooltip name="КодРазрешенияРасширеннаяПодсказка" id="27"/>
-								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="Группа3" id="79">
@@ -219,6 +171,13 @@
 									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<ContextMenu name="ВремяОжиданияОтключенияКонтекстноеМеню" id="82"/>
 									<ExtendedTooltip name="ВремяОжиданияОтключенияРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<InputField name="КодРазрешения" id="25">
+									<DataPath>Объект.КодРазрешения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>5</Width>
+									<ContextMenu name="КодРазрешенияКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="КодРазрешенияРасширеннаяПодсказка" id="27"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
@@ -253,6 +212,29 @@
 									<ContextMenu name="ПерезапускКластераКонтекстноеМеню" id="91"/>
 									<ExtendedTooltip name="ПерезапускКластераРасширеннаяПодсказка" id="92"/>
 								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="SQL" id="202">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>SQL</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>SQL</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="SQLРасширеннаяПодсказка" id="203"/>
+							<ChildItems>
+								<InputField name="SQL_db" id="204">
+									<DataPath>Объект.SQL_db</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="SQL_dbКонтекстноеМеню" id="205"/>
+									<ExtendedTooltip name="SQL_dbРасширеннаяПодсказка" id="206"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -548,6 +530,64 @@
 								</CheckBoxField>
 							</ChildItems>
 						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительно" id="200">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="201"/>
+					<ChildItems>
+						<UsualGroup name="Группа4" id="198">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="199"/>
+							<ChildItems>
+								<CheckBoxField name="РеглЗаданияАктивность" id="195">
+									<DataPath>Объект.РеглЗаданияАктивность</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Активно</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РеглЗаданияАктивностьКонтекстноеМеню" id="196"/>
+									<ExtendedTooltip name="РеглЗаданияАктивностьРасширеннаяПодсказка" id="197"/>
+								</CheckBoxField>
+								<LabelField name="РасписаниеРегЗадания" id="189">
+									<DataPath>РеглЗадание</DataPath>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="РасписаниеРегЗаданияКонтекстноеМеню" id="190"/>
+									<ExtendedTooltip name="РасписаниеРегЗаданияРасширеннаяПодсказка" id="191"/>
+									<Events>
+										<Event name="Click">РасписаниеРегЗаданияНажатие</Event>
+									</Events>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ПутьКПлатформе1С" id="84">
+							<DataPath>Объект.ПутьКПлатформе1С</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<BackColor>win:ToolTip</BackColor>
+							<ContextMenu name="ПутьКПлатформе1СКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ПутьКПлатформе1СРасширеннаяПодсказка" id="86"/>
+						</InputField>
+						<InputField name="ПутьКRAC" id="171">
+							<DataPath>Объект.ПутьКRAC</DataPath>
+							<ContextMenu name="ПутьКRACКонтекстноеМеню" id="172"/>
+							<ExtendedTooltip name="ПутьКRACРасширеннаяПодсказка" id="173"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 			</ChildItems>

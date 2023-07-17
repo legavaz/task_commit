@@ -3,15 +3,15 @@
 	<WorkingAreaTemplate>OneColumn</WorkingAreaTemplate>
 	<Column>
 		<Item>
-			<Form>Catalog.ЗД_ИнформационныеБазы.Form.ФормаСписка</Form>
+			<Form>DataProcessor.ЗапускЗаданияSQL.Form.Форма</Form>
 			<Height>10</Height>
 			<Visibility>
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Item>
 		<Item>
-			<Form>DataProcessor.ЗапускЗаданияSQL.Form.Форма</Form>
-			<Height>10</Height>
+			<Form>Catalog.ЗД_ИнформационныеБазы.Form.ФормаСписка</Form>
+			<Height>3</Height>
 			<Visibility>
 				<xr:Common>true</xr:Common>
 			</Visibility>
