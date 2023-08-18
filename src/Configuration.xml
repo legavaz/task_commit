@@ -66,9 +66,9 @@
 			<DynamicListsUserSettingsStorage/>
 			<URLExternalDataStorage/>
 			<Content/>
-			<DefaultReportForm/>
-			<DefaultReportVariantForm/>
-			<DefaultReportSettingsForm/>
+			<DefaultReportForm>CommonForm.ФормаОтчета</DefaultReportForm>
+			<DefaultReportVariantForm>CommonForm.ФормаВариантаОтчета</DefaultReportVariantForm>
+			<DefaultReportSettingsForm>CommonForm.ФормаНастроекОтчета</DefaultReportSettingsForm>
 			<DefaultReportAppearanceTemplate/>
 			<DefaultDynamicListSettingsForm/>
 			<DefaultSearchForm/>
@@ -274,6 +274,7 @@
 			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
 			<Subsystem>кст_KPI</Subsystem>
+			<Subsystem>Прочее</Subsystem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряРабочийЦвет</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряПраздникЦвет</StyleItem>
@@ -1161,6 +1162,7 @@
 			<Report>УниверсальныйОтчет</Report>
 			<Report>ИспользуемыеВнешниеРесурсы</Report>
 			<Report>ПоказателиJira</Report>
+			<Report>ПоказателиJira_old</Report>
 			<DataProcessor>КонсольЗаданий</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
 			<DataProcessor>ВыгрузкаЗагрузкаДанныхСверткаСсылокНаПользователейВРазделенныхДанных</DataProcessor>
@@ -1244,7 +1246,9 @@
 			<InformationRegister>SQLПравоЗапускаЗаданий</InformationRegister>
 			<InformationRegister>SQLВыполнениеЗаданий</InformationRegister>
 			<InformationRegister>ПолученныеОтчетыОбОшибках</InformationRegister>
+			<InformationRegister>СтатистикаСоединенийMSSQL</InformationRegister>
 			<ExternalDataSource>кст_Jira_sql</ExternalDataSource>
+			<ExternalDataSource>ks_tech</ExternalDataSource>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

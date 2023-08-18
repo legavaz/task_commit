@@ -131,6 +131,16 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
+			<dataPath>День</dataPath>
+			<field>День</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>День</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
 			<dataPath>Статус</dataPath>
 			<field>Статус</field>
 			<title xsi:type="v8:LocalStringType">
@@ -140,51 +150,18 @@
 				</v8:item>
 			</title>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>display_name</dataPath>
-			<field>display_name</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>hours_spent</dataPath>
-			<field>hours_spent</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Часов потрачено</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>issue_id</dataPath>
-			<field>issue_id</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>name</dataPath>
-			<field>name</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Дней</dataPath>
-			<field>Дней</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дней</v8:content>
-				</v8:item>
-			</title>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	НЕДЕЛЯ(ЕСТЬNULL(dwh_1_jira_issues.closed_at, &amp;ТекущаяДата)) КАК Неделя,
 	dwh_1_jira_issues.project_name КАК Вид,
 	dwh_1_jira_issues.reporter_name КАК reporter_name,
 	dwh_1_jira_issues.assignee_name КАК assignee_name,
-	ВЗ_ПотраченноеВремя.display_name КАК display_name,
 	dwh_1_jira_issues.issue_key КАК Задача,
 	dwh_1_jira_issues.customfield_10109_status КАК status,
 	dwh_1_jira_issues.issue_summary КАК issue_summary,
 	dwh_1_jira_issues.created_at КАК Создано,
 	ЕСТЬNULL(dwh_1_jira_issues.closed_at, ДАТАВРЕМЯ(1, 1, 1)) КАК Закрыто,
-	РАЗНОСТЬДАТ(dwh_1_jira_issues.created_at, ЕСТЬNULL(dwh_1_jira_issues.closed_at, dwh_1_jira_issues.created_at), ДЕНЬ) КАК Дней,
+	РАЗНОСТЬДАТ(dwh_1_jira_issues.created_at, ЕСТЬNULL(dwh_1_jira_issues.closed_at, dwh_1_jira_issues.created_at), ДЕНЬ) КАК День,
 	1 КАК Количество,
 	ВЫБОР
 		КОГДА dwh_1_jira_issues.closed_at ЕСТЬ NULL
@@ -192,31 +169,15 @@
 		ИНАЧЕ ЛОЖЬ
 	КОНЕЦ КАК Активная,
 	ВЫБОР
-		КОГДА dwh_1_jira_issues.assignee_name В ("1c-cron1", "arvaninov", "baklanov", "dubakova", "kozhekin", "moseyko", "shapovalova", "stepanov_da", "zykov_gs")
+		КОГДА dwh_1_jira_issues.assignee_name В ("arvaninov", "baklanov", "dubakova", "kozhekin", "moseyko", "shapovalova", "stepanov_da", "zykov_gs")
 			ТОГДА "Разработчик"
 		ИНАЧЕ "Прочее"
 	КОНЕЦ КАК Роль,
-	dwh_1_jira_statuses.name КАК Статус,
-	ВЗ_ПотраченноеВремя.hours_spent КАК hours_spent
+	dwh_1_jira_statuses.name КАК Статус
 ИЗ
 	ВнешнийИсточникДанных.кст_Jira_sql.Таблица.dwh_1_jira_issues КАК dwh_1_jira_issues
 		ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.кст_Jira_sql.Таблица.dwh_1_jira_statuses КАК dwh_1_jira_statuses
-		ПО (dwh_1_jira_issues.status_id = dwh_1_jira_statuses.id)
-		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
-			dwh_1_jira_issues_measures_wl.issue_id КАК issue_id,
-			СУММА(dwh_1_jira_issues_measures_wl.hours_spent) КАК hours_spent,
-			dwh_1_jira_assignees.name КАК name,
-			dwh_1_jira_assignees.display_name КАК display_name
-		ИЗ
-			ВнешнийИсточникДанных.кст_Jira_sql.Таблица.dwh_1_jira_issues_measures_wl КАК dwh_1_jira_issues_measures_wl
-				ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.кст_Jira_sql.Таблица.dwh_1_jira_assignees КАК dwh_1_jira_assignees
-				ПО dwh_1_jira_issues_measures_wl.assignee_id = dwh_1_jira_assignees.id
-		
-		СГРУППИРОВАТЬ ПО
-			dwh_1_jira_issues_measures_wl.issue_id,
-			dwh_1_jira_assignees.name,
-			dwh_1_jira_assignees.display_name) КАК ВЗ_ПотраченноеВремя
-		ПО (dwh_1_jira_issues.id = ВЗ_ПотраченноеВремя.issue_id)
+		ПО dwh_1_jira_issues.status_id = dwh_1_jira_statuses.id
 ГДЕ
 	(dwh_1_jira_issues.created_at МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
 			ИЛИ dwh_1_jira_issues.closed_at МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
@@ -227,8 +188,8 @@
 		<expression>Сумма(количество)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>hours_spent</dataPath>
-		<expression>Сумма(hours_spent)</expression>
+		<dataPath>День</dataPath>
+		<expression>Сумма(День)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -312,10 +273,6 @@
 					<dcsset:field>assignee_name</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:field>display_name</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>reporter_name</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -341,13 +298,10 @@
 					<dcsset:field>Статус</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Дней</dcsset:field>
+					<dcsset:field>День</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>количество</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>hours_spent</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
@@ -593,47 +547,6 @@
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>Количество</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-			</dcsset:item>
-			<dcsset:item xsi:type="dcsset:StructureItemChart">
-				<dcsset:point>
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>assignee_name</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-				</dcsset:point>
-				<dcsset:series>
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Вид</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-				</dcsset:series>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>hours_spent</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 			</dcsset:item>
