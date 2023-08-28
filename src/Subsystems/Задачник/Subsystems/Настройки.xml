@@ -21,6 +21,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОстановитьИсполнение</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.SQLПравоЗапускаЗаданий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.SQLВыполнениеЗаданий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.SQLЗаданиеКоличествоПопыток</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

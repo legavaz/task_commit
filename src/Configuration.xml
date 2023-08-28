@@ -1051,6 +1051,7 @@
 			<Constant>ПрофильБезопасностиИнформационнойБазы</Constant>
 			<Constant>РазрешитьВыполнениеДООРегламентнымиЗаданиямиВМоделиСервиса</Constant>
 			<Constant>ЗД_ПутьДо_oscript</Constant>
+			<Constant>SQLЗаданиеКоличествоПопыток</Constant>
 			<CommonForm>АутентификацияВСервисе</CommonForm>
 			<CommonForm>ФормаКонстант</CommonForm>
 			<CommonForm>ВводЗначенийСпискомСФлажками</CommonForm>
