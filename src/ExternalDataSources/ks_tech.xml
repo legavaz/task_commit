@@ -28,6 +28,7 @@
 		</Properties>
 		<ChildObjects>
 			<Table>dbo_View_1</Table>
+			<Table>dbo_DDIPS</Table>
 		</ChildObjects>
 	</ExternalDataSource>
 </MetaDataObject>
