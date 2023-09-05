@@ -1052,6 +1052,7 @@
 			<Constant>РазрешитьВыполнениеДООРегламентнымиЗаданиямиВМоделиСервиса</Constant>
 			<Constant>ЗД_ПутьДо_oscript</Constant>
 			<Constant>SQLЗаданиеКоличествоПопыток</Constant>
+			<Constant>ЗД_ИБПоУмолчанию</Constant>
 			<CommonForm>АутентификацияВСервисе</CommonForm>
 			<CommonForm>ФормаКонстант</CommonForm>
 			<CommonForm>ВводЗначенийСпискомСФлажками</CommonForm>
@@ -1129,6 +1130,7 @@
 			<Catalog>SQLЗадания</Catalog>
 			<Catalog>SQLDBРабочие</Catalog>
 			<Catalog>SQLDBТестовые</Catalog>
+			<Catalog>ТаблицыМетаданных</Catalog>
 			<Document>ОтчетыОбОшибках</Document>
 			<Enum>ВариантыПериода</Enum>
 			<Enum>ВариантыПубликацииДополнительныхОтчетовИОбработок</Enum>
@@ -1165,6 +1167,7 @@
 			<Report>ИспользуемыеВнешниеРесурсы</Report>
 			<Report>ПоказателиJira</Report>
 			<Report>ПоказателиJira_old</Report>
+			<Report>СтатистикаФрагментацииТаблиц</Report>
 			<DataProcessor>КонсольЗаданий</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
 			<DataProcessor>ВыгрузкаЗагрузкаДанныхСверткаСсылокНаПользователейВРазделенныхДанных</DataProcessor>
