@@ -169,7 +169,7 @@
 		ИНАЧЕ ЛОЖЬ
 	КОНЕЦ КАК Активная,
 	ВЫБОР
-		КОГДА dwh_1_jira_issues.assignee_name В ("arvaninov", "baklanov", "dubakova", "kozhekin", "moseyko", "shapovalova", "stepanov_da", "zykov_gs")
+		КОГДА dwh_1_jira_issues.assignee_name В ("danilin","1c-cron1","arvaninov", "baklanov", "dubakova", "shapovalova", "stepanov_da", "zykov_gs")
 			ТОГДА "Разработчик"
 		ИНАЧЕ "Прочее"
 	КОНЕЦ КАК Роль,
