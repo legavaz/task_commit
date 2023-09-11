@@ -42,6 +42,7 @@
 			<Subsystem>НастройкиПрограммы</Subsystem>
 			<Subsystem>ПрофилиБезопасности</Subsystem>
 			<Subsystem>ТекущиеДела</Subsystem>
+			<Subsystem>ОценкаПроизводительности</Subsystem>
 		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

@@ -587,6 +587,7 @@
 			<SessionParameter>ТипыВладельцевНастроекПрав</SessionParameter>
 			<SessionParameter>ТипыЗначенийДоступаСГруппами</SessionParameter>
 			<SessionParameter>УстановленныеРасширения</SessionParameter>
+			<SessionParameter>КомментарийЗамераВремени</SessionParameter>
 			<Role>АдминистраторСистемы</Role>
 			<Role>БазовыеПраваБСП</Role>
 			<Role>БазовыеПраваВнешнихПользователейБСП</Role>
@@ -631,6 +632,7 @@
 			<Role>ИспользованиеОбработкиТекущиеДела</Role>
 			<Role>ЗапускЗаданийSQL</Role>
 			<Role>ВнешниеИсточникиJira_Чтение</Role>
+			<Role>НастройкаИОценкаПроизводительности</Role>
 			<CommonTemplate>ПолучениеДереваОбработчиковОбновления</CommonTemplate>
 			<CommonModule>АдминистрированиеКластера</CommonModule>
 			<CommonModule>ВариантыОтчетовСлужебныйКлиентСервер</CommonModule>
@@ -848,6 +850,14 @@
 			<CommonModule>ЗД_Модуль_oscript_Привелегированный</CommonModule>
 			<CommonModule>ЗД_Сериализация</CommonModule>
 			<CommonModule>SQLВыполнениеЗаданий</CommonModule>
+			<CommonModule>ОценкаПроизводительности</CommonModule>
+			<CommonModule>ОценкаПроизводительностиВызовСервера</CommonModule>
+			<CommonModule>ОценкаПроизводительностиВызовСервераПовтИсп</CommonModule>
+			<CommonModule>ОценкаПроизводительностиГлобальный</CommonModule>
+			<CommonModule>ОценкаПроизводительностиКлиент</CommonModule>
+			<CommonModule>ОценкаПроизводительностиКлиентСервер</CommonModule>
+			<CommonModule>ОценкаПроизводительностиПовтИсп</CommonModule>
+			<CommonModule>ОценкаПроизводительностиСлужебный</CommonModule>
 			<CommonAttribute>ОбластьДанныхВспомогательныеДанные</CommonAttribute>
 			<CommonAttribute>ОбластьДанныхОсновныеДанные</CommonAttribute>
 			<ExchangePlan>ОбновлениеИнформационнойБазы</ExchangePlan>
@@ -866,6 +876,10 @@
 			<XDTOPackage>ApplicationExtensionsManifest_1_0_0_2</XDTOPackage>
 			<XDTOPackage>ApplicationPermissions_1_0_0_1</XDTOPackage>
 			<XDTOPackage>ApplicationPermissions_1_0_0_2</XDTOPackage>
+			<XDTOPackage>ApdexExport</XDTOPackage>
+			<XDTOPackage>ApdexExport_1_0_0_2</XDTOPackage>
+			<XDTOPackage>ApdexExport_1_0_0_3</XDTOPackage>
+			<XDTOPackage>ApdexExport_1_0_0_4</XDTOPackage>
 			<WebService>InterfaceVersion</WebService>
 			<HTTPService>ОсновнойСервис</HTTPService>
 			<EventSubscription>ВариантыОтчетовПередУдалениемИдентификатораОбъектаМетаданных</EventSubscription>
@@ -925,6 +939,8 @@
 			<ScheduledJob>УдалениеУстаревшихПараметровРаботыВерсийРасширений</ScheduledJob>
 			<ScheduledJob>SQLВыполнениеЗаданий</ScheduledJob>
 			<ScheduledJob>СборСтатистикиСервераSQL</ScheduledJob>
+			<ScheduledJob>ОчисткаЗамеровВремени</ScheduledJob>
+			<ScheduledJob>ЭкспортОценкиПроизводительности</ScheduledJob>
 			<SettingsStorage>ХранилищеВариантовОтчетов</SettingsStorage>
 			<FunctionalOption>ИспользоватьВнешнихПользователей</FunctionalOption>
 			<FunctionalOption>ИспользоватьДополнительныеОбработкиСозданияСвязанныхОбъектов</FunctionalOption>
@@ -1053,6 +1069,12 @@
 			<Constant>ЗД_ПутьДо_oscript</Constant>
 			<Constant>SQLЗаданиеКоличествоПопыток</Constant>
 			<Constant>ЗД_ИБПоУмолчанию</Constant>
+			<Constant>ВыполнятьЗамерыПроизводительности</Constant>
+			<Constant>ДатаПоследнейВыгрузкиЗамеровПроизводительностиUTC</Constant>
+			<Constant>КоличествоЗамеровВПакетеЭкспорта</Constant>
+			<Constant>ОценкаПроизводительностиПериодЗаписи</Constant>
+			<Constant>ПериодХраненияЗамеров</Constant>
+			<Constant>ЗД_ПапкаФайлов_apdex</Constant>
 			<CommonForm>АутентификацияВСервисе</CommonForm>
 			<CommonForm>ФормаКонстант</CommonForm>
 			<CommonForm>ВводЗначенийСпискомСФлажками</CommonForm>
@@ -1100,18 +1122,17 @@
 			<CommonForm>ПараметрыАдминистрированияПрограммы</CommonForm>
 			<Catalog>ВариантыОтчетов</Catalog>
 			<Catalog>ВерсииРасширений</Catalog>
-			<Catalog>ВидыКонтактнойИнформации</Catalog>
-			<Catalog>ВнешниеПользователи</Catalog>
 			<Catalog>ГруппыВнешнихПользователей</Catalog>
 			<Catalog>ГруппыДоступа</Catalog>
 			<Catalog>ГруппыПользователей</Catalog>
 			<Catalog>ДополнительныеОтчетыИОбработки</Catalog>
+			<Catalog>ИдентификаторыОбъектовМетаданных</Catalog>
+			<Catalog>ИдентификаторыОбъектовРасширений</Catalog>
 			<Catalog>ЗД_ИнформационныеБазы</Catalog>
 			<Catalog>ЗД_Скрипты</Catalog>
 			<Catalog>ЗД_Хранилища</Catalog>
-			<Catalog>ИдентификаторыОбъектовМетаданных</Catalog>
-			<Catalog>ИдентификаторыОбъектовРасширений</Catalog>
 			<Catalog>Календари</Catalog>
+			<Catalog>ВнешниеПользователи</Catalog>
 			<Catalog>КлючиДоступа</Catalog>
 			<Catalog>НаборыГруппДоступа</Catalog>
 			<Catalog>Пользователи</Catalog>
@@ -1121,6 +1142,7 @@
 			<Catalog>ПредопределенныеВариантыОтчетовРасширений</Catalog>
 			<Catalog>ПроизводственныеКалендари</Catalog>
 			<Catalog>ПрофилиГруппДоступа</Catalog>
+			<Catalog>ВидыКонтактнойИнформации</Catalog>
 			<Catalog>РассылкиОтчетов</Catalog>
 			<Catalog>СтраныМира</Catalog>
 			<Catalog>УчетныеЗаписиЭлектроннойПочты</Catalog>
@@ -1131,6 +1153,8 @@
 			<Catalog>SQLDBРабочие</Catalog>
 			<Catalog>SQLDBТестовые</Catalog>
 			<Catalog>ТаблицыМетаданных</Catalog>
+			<Catalog>КлючевыеОперации</Catalog>
+			<Catalog>ПрофилиКлючевыхОпераций</Catalog>
 			<Document>ОтчетыОбОшибках</Document>
 			<Enum>ВариантыПериода</Enum>
 			<Enum>ВариантыПубликацииДополнительныхОтчетовИОбработок</Enum>
@@ -1157,6 +1181,7 @@
 			<Enum>ПричиныОтключенияДополнительныхОтчетовИОбработокВМоделиСервиса</Enum>
 			<Enum>СостоянияЗапросовНаИспользованиеВнешнихРесурсов</Enum>
 			<Enum>ЗД_ТипСкрипта</Enum>
+			<Enum>УровниПроизводительности</Enum>
 			<Report>АнализЖурналаРегистрации</Report>
 			<Report>АнализПравДоступа</Report>
 			<Report>ПраваДоступа</Report>
@@ -1168,6 +1193,7 @@
 			<Report>ПоказателиJira</Report>
 			<Report>ПоказателиJira_old</Report>
 			<Report>СтатистикаФрагментацииТаблиц</Report>
+			<Report>ОценкаПроизводительности</Report>
 			<DataProcessor>КонсольЗаданий</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
 			<DataProcessor>ВыгрузкаЗагрузкаДанныхСверткаСсылокНаПользователейВРазделенныхДанных</DataProcessor>
@@ -1192,6 +1218,7 @@
 			<DataProcessor>ТекущиеДела</DataProcessor>
 			<DataProcessor>ЗапускЗаданияSQL</DataProcessor>
 			<DataProcessor>ОбработатьПолученныеОтчетыОбОшибках</DataProcessor>
+			<DataProcessor>ОценкаПроизводительности</DataProcessor>
 			<InformationRegister>БезопасноеХранилищеДанных</InformationRegister>
 			<InformationRegister>ЖурналЗапускаСкриптов</InformationRegister>
 			<InformationRegister>ГруппыЗначенийДоступа</InformationRegister>
@@ -1252,6 +1279,9 @@
 			<InformationRegister>SQLВыполнениеЗаданий</InformationRegister>
 			<InformationRegister>ПолученныеОтчетыОбОшибках</InformationRegister>
 			<InformationRegister>СтатистикаСоединенийMSSQL</InformationRegister>
+			<InformationRegister>ЗамерыВремени</InformationRegister>
+			<InformationRegister>ЗамерыВремениТехнологические</InformationRegister>
+			<InformationRegister>ЗД_ЗагруженныеФайлыЗамеров</InformationRegister>
 			<ExternalDataSource>кст_Jira_sql</ExternalDataSource>
 			<ExternalDataSource>ks_tech</ExternalDataSource>
 		</ChildObjects>

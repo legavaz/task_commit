@@ -91,7 +91,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:344cb0de-315d-4d05-93f8-8a1f53208470">
+		<Command name="Catalog.КлючевыеОперации.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -146,7 +146,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:0d89036c-af6e-4709-847c-0dab74a33d72">
+		<Command name="Catalog.ПрофилиКлючевыхОпераций.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -281,7 +281,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:269ada84-71a9-4b4b-9604-caa40c5b7067">
+		<Command name="Report.ОценкаПроизводительности.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -386,7 +386,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:e0227e4b-be22-4614-8980-5d573fae705d">
+		<Command name="DataProcessor.ОценкаПроизводительности.Command.НастройкиОценкиПроизводительности">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -406,7 +406,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:256618cc-0956-4cda-9691-e4ced68a791f">
+		<Command name="DataProcessor.ОценкаПроизводительности.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -486,7 +486,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:7a7b7882-a4c1-40c8-a807-cb2d71d054cc">
+		<Command name="DataProcessor.ОценкаПроизводительности.Command.ЭкспортЗамеровПроизводительности">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -496,7 +496,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:6f36007b-04dc-4007-abf7-e20fbd126b97">
+		<Command name="DataProcessor.ОценкаПроизводительности.Command.ИмпортЗамеровПроизводительности">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -718,7 +718,7 @@
 		<Command name="0:b56f25d2-72a9-4d80-8998-77ac3097c873">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="0:344cb0de-315d-4d05-93f8-8a1f53208470">
+		<Command name="Catalog.КлючевыеОперации.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="0:f692ab21-a8de-4feb-914f-4beef350543a">
@@ -751,7 +751,7 @@
 		<Command name="CommonCommand.ВремяТекущегоСеанса">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="0:0d89036c-af6e-4709-847c-0dab74a33d72">
+		<Command name="Catalog.ПрофилиКлючевыхОпераций.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="0:55bce105-51c0-452e-9eec-b960fe740db2">
@@ -892,7 +892,7 @@
 		<Command name="CommonCommand.НастройкаСистемнойУчетнойЗаписиЭлектроннойПочты">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="0:e0227e4b-be22-4614-8980-5d573fae705d">
+		<Command name="DataProcessor.ОценкаПроизводительности.Command.НастройкиОценкиПроизводительности">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="DataProcessor.НастройкиПользователей.StandardCommand.Open">
@@ -904,7 +904,7 @@
 		<Command name="CommonForm.ОписаниеИзмененийПрограммы.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="0:256618cc-0956-4cda-9691-e4ced68a791f">
+		<Command name="DataProcessor.ОценкаПроизводительности.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="DataProcessor.НастройкиПользователей.Command.ОчисткаНастроекПользователей">
@@ -952,13 +952,13 @@
 		<Command name="CommonForm.Расширения.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="0:7a7b7882-a4c1-40c8-a807-cb2d71d054cc">
+		<Command name="DataProcessor.ОценкаПроизводительности.Command.ЭкспортЗамеровПроизводительности">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="CommonForm.НастройкиВходаПользователей.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="0:6f36007b-04dc-4007-abf7-e20fbd126b97">
+		<Command name="DataProcessor.ОценкаПроизводительности.Command.ИмпортЗамеровПроизводительности">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 		<Command name="0:f38bb317-8a59-4786-be76-e1d4e534628d">
@@ -1006,7 +1006,7 @@
 		<Command name="0:97ec899d-a2a0-4691-83ff-25b78dd49ef6">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="0:269ada84-71a9-4b4b-9604-caa40c5b7067">
+		<Command name="Report.ОценкаПроизводительности.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.ПрогрессОтложенногоОбновления.StandardCommand.Open">
