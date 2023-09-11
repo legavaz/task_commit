@@ -9,6 +9,17 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>now</dataPath>
 			<field>now</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=T</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>index_name</dataPath>
@@ -24,7 +35,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Avg fragmentation in percent</v8:content>
+					<v8:content>% фрагм.</v8:content>
 				</v8:item>
 			</title>
 			<appearance>
@@ -36,6 +47,10 @@
 							<v8:content>ЧЦ=10</v8:content>
 						</v8:item>
 					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">13</dcscor:value>
 				</dcscor:item>
 			</appearance>
 		</field>
@@ -60,6 +75,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Ссылка</dataPath>
 			<field>Ссылка</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">30</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Наименование</dataPath>
@@ -81,10 +102,10 @@
 	И НЕ ТаблицыМетаданных.ПометкаУдаления</query>
 	</dataSet>
 	<dataSetLink>
-		<sourceDataSet>НД_Метаданные</sourceDataSet>
-		<destinationDataSet>НД_Статистика</destinationDataSet>
-		<sourceExpression>ИмяТаблицыХранения</sourceExpression>
-		<destinationExpression>table_name</destinationExpression>
+		<sourceDataSet>НД_Статистика</sourceDataSet>
+		<destinationDataSet>НД_Метаданные</destinationDataSet>
+		<sourceExpression>table_name</sourceExpression>
+		<destinationExpression>ИмяТаблицыХранения</destinationExpression>
 	</dataSetLink>
 	<totalField>
 		<dataPath>avg_fragmentation_in_percent</dataPath>
