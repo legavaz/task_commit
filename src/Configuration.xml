@@ -270,11 +270,11 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>Задачник</Subsystem>
-			<Subsystem>Администрирование</Subsystem>
 			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
 			<Subsystem>кст_KPI</Subsystem>
 			<Subsystem>Прочее</Subsystem>
+			<Subsystem>Администрирование</Subsystem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряРабочийЦвет</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряПраздникЦвет</StyleItem>
@@ -941,6 +941,7 @@
 			<ScheduledJob>СборСтатистикиСервераSQL</ScheduledJob>
 			<ScheduledJob>ОчисткаЗамеровВремени</ScheduledJob>
 			<ScheduledJob>ЭкспортОценкиПроизводительности</ScheduledJob>
+			<ScheduledJob>ИмпортОценкиПроизводительности</ScheduledJob>
 			<SettingsStorage>ХранилищеВариантовОтчетов</SettingsStorage>
 			<FunctionalOption>ИспользоватьВнешнихПользователей</FunctionalOption>
 			<FunctionalOption>ИспользоватьДополнительныеОбработкиСозданияСвязанныхОбъектов</FunctionalOption>
