@@ -425,6 +425,47 @@
 					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
 				</dcscor:item>
 			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>assignee_name</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:point>
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Вид</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Количество</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
 			<dcsset:item xsi:type="dcsset:StructureItemTable">
 				<dcsset:column>
 					<dcsset:groupItems>
@@ -519,47 +560,6 @@
 						</dcsset:item>
 					</dcsset:item>
 				</dcsset:row>
-			</dcsset:item>
-			<dcsset:item xsi:type="dcsset:StructureItemChart">
-				<dcsset:point>
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>assignee_name</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-				</dcsset:point>
-				<dcsset:series>
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Вид</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-				</dcsset:series>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>Количество</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>
