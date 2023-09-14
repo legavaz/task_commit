@@ -273,7 +273,7 @@
 			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
 			<Subsystem>кст_KPI</Subsystem>
-			<Subsystem>Прочее</Subsystem>
+			<Subsystem>кстПоказатели</Subsystem>
 			<Subsystem>Администрирование</Subsystem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряРабочийЦвет</StyleItem>
@@ -1193,7 +1193,7 @@
 			<Report>ИспользуемыеВнешниеРесурсы</Report>
 			<Report>ПоказателиJira</Report>
 			<Report>ПоказателиJira_old</Report>
-			<Report>СтатистикаФрагментацииТаблиц</Report>
+			<Report>СтатистикаФрагментацииРазмераТаблиц</Report>
 			<Report>ОценкаПроизводительности</Report>
 			<DataProcessor>КонсольЗаданий</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>

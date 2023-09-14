@@ -58,13 +58,18 @@
 			<dataPath>page_count</dataPath>
 			<field>page_count</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>number_of_rows</dataPath>
+			<field>number_of_rows</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	dbo_DDIPS.table_name КАК table_name,
 	dbo_DDIPS.index_name КАК index_name,
 	ВЫРАЗИТЬ(dbo_DDIPS.avg_fragmentation_in_percent КАК ЧИСЛО(15, 0)) КАК avg_fragmentation_in_percent,
 	dbo_DDIPS.page_count КАК page_count,
-	dbo_DDIPS.now КАК now
+	dbo_DDIPS.now КАК now,
+	dbo_DDIPS.number_of_rows КАК number_of_rows
 ИЗ
 	ВнешнийИсточникДанных.ks_tech.Таблица.dbo_DDIPS КАК dbo_DDIPS
 ГДЕ
@@ -110,6 +115,16 @@
 	<totalField>
 		<dataPath>avg_fragmentation_in_percent</dataPath>
 		<expression>Среднее(avg_fragmentation_in_percent)</expression>
+		<group>table_name</group>
+	</totalField>
+	<totalField>
+		<dataPath>number_of_rows</dataPath>
+		<expression>Сумма(number_of_rows)</expression>
+		<group>table_name</group>
+	</totalField>
+	<totalField>
+		<dataPath>page_count</dataPath>
+		<expression>Сумма(page_count)</expression>
 		<group>table_name</group>
 	</totalField>
 	<parameter>
@@ -193,6 +208,12 @@
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>avg_fragmentation_in_percent</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>number_of_rows</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>page_count</dcsset:field>
+				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -214,7 +235,7 @@
 					<dcsset:orderType>Desc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>avg_fragmentation_in_percent</dcsset:field>
+					<dcsset:field>number_of_rows</dcsset:field>
 					<dcsset:orderType>Desc</dcsset:orderType>
 				</dcsset:item>
 			</dcsset:order>
