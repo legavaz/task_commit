@@ -25,6 +25,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_assignees</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_d_time</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ПоказателиJira_old</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.зд_АналитикаJira</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

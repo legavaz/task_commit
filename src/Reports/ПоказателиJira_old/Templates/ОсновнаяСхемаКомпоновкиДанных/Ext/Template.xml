@@ -121,16 +121,6 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Роль</dataPath>
-			<field>Роль</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Роль</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>День</dataPath>
 			<field>День</field>
 			<title xsi:type="v8:LocalStringType">
@@ -168,11 +158,6 @@
 			ТОГДА ИСТИНА
 		ИНАЧЕ ЛОЖЬ
 	КОНЕЦ КАК Активная,
-	ВЫБОР
-		КОГДА dwh_1_jira_issues.assignee_name В ("danilin","1c-cron1","arvaninov", "baklanov", "dubakova", "shapovalova", "stepanov_da", "zykov_gs")
-			ТОГДА "Разработчик"
-		ИНАЧЕ "Прочее"
-	КОНЕЦ КАК Роль,
 	dwh_1_jira_statuses.name КАК Статус
 ИЗ
 	ВнешнийИсточникДанных.кст_Jira_sql.Таблица.dwh_1_jira_issues КАК dwh_1_jira_issues
@@ -183,6 +168,35 @@
 			ИЛИ dwh_1_jira_issues.closed_at МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
 			ИЛИ dwh_1_jira_issues.closed_at ЕСТЬ NULL)</query>
 	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналитика</dataPath>
+			<field>Аналитика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяПоля</dataPath>
+			<field>ИмяПоля</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	зд_АналитикаJiraТЧ_Аналитики.Ссылка КАК Аналитика,
+	зд_АналитикаJiraТЧ_Аналитики.ИмяПоля КАК ИмяПоля
+ИЗ
+	Справочник.зд_АналитикаJira.ТЧ_Аналитики КАК зд_АналитикаJiraТЧ_Аналитики</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>assignee_name</sourceExpression>
+		<destinationExpression>ИмяПоля</destinationExpression>
+	</dataSetLink>
 	<totalField>
 		<dataPath>количество</dataPath>
 		<expression>Сумма(количество)</expression>
@@ -307,36 +321,10 @@
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">assignee_name</dcsset:left>
-					<dcsset:comparisonType>Contains</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:string"/>
-					<dcsset:userSettingID>a71dcd30-7cb0-4f02-acbe-f6a5945262e6</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">reporter_name</dcsset:left>
-					<dcsset:comparisonType>Contains</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:string"/>
-					<dcsset:userSettingID>d11eb827-7197-41d8-b22c-7025ab598de0</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Вид</dcsset:left>
-					<dcsset:comparisonType>Contains</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:string"/>
-					<dcsset:userSettingID>45d9c553-b7e7-4dd6-9d4a-de32ca20c3b7</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:left xsi:type="dcscor:Field">Роль</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">Аналитика</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:string">Разработчик</dcsset:right>
-					<dcsset:userSettingID>dc2148ea-222f-43ea-ad21-c2a8351cbe03</dcsset:userSettingID>
-					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Разработчик</v8:content>
-						</v8:item>
-					</dcsset:userSettingPresentation>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.зд_АналитикаJira.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>046d10e3-989c-46b0-a19f-d208b1905691</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:left xsi:type="dcscor:Field">Активная</dcsset:left>
@@ -349,6 +337,12 @@
 							<v8:content>Активные</v8:content>
 						</v8:item>
 					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Вид</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:left xsi:type="dcscor:Field">Статус</dcsset:left>
@@ -452,7 +446,7 @@
 				<dcsset:row>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>assignee_name</dcsset:field>
+							<dcsset:field>Аналитика</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -468,7 +462,7 @@
 					<dcsset:item>
 						<dcsset:groupItems>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Вид</dcsset:field>
+								<dcsset:field>assignee_name</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -484,7 +478,7 @@
 						<dcsset:item>
 							<dcsset:groupItems>
 								<dcsset:item xsi:type="dcsset:GroupItemField">
-									<dcsset:field>Статус</dcsset:field>
+									<dcsset:field>Вид</dcsset:field>
 									<dcsset:groupType>Items</dcsset:groupType>
 									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -498,12 +492,29 @@
 								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 							</dcsset:selection>
 							<dcsset:item>
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>Статус</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
 								<dcsset:order>
 									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 								</dcsset:order>
 								<dcsset:selection>
 									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 								</dcsset:selection>
+								<dcsset:item>
+									<dcsset:order>
+										<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+									</dcsset:order>
+									<dcsset:selection>
+										<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+									</dcsset:selection>
+								</dcsset:item>
 							</dcsset:item>
 						</dcsset:item>
 					</dcsset:item>

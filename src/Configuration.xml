@@ -270,10 +270,10 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>Задачник</Subsystem>
-			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
-			<Subsystem>СтандартныеПодсистемы</Subsystem>
 			<Subsystem>кст_KPI</Subsystem>
 			<Subsystem>кстПоказатели</Subsystem>
+			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
+			<Subsystem>СтандартныеПодсистемы</Subsystem>
 			<Subsystem>Администрирование</Subsystem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряРабочийЦвет</StyleItem>
@@ -1156,6 +1156,7 @@
 			<Catalog>ТаблицыМетаданных</Catalog>
 			<Catalog>КлючевыеОперации</Catalog>
 			<Catalog>ПрофилиКлючевыхОпераций</Catalog>
+			<Catalog>зд_АналитикаJira</Catalog>
 			<Document>ОтчетыОбОшибках</Document>
 			<Enum>ВариантыПериода</Enum>
 			<Enum>ВариантыПубликацииДополнительныхОтчетовИОбработок</Enum>
