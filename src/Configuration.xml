@@ -1076,6 +1076,7 @@
 			<Constant>ОценкаПроизводительностиПериодЗаписи</Constant>
 			<Constant>ПериодХраненияЗамеров</Constant>
 			<Constant>ЗД_ПапкаФайлов_apdex</Constant>
+			<Constant>ОтчетыОбОшибкахОтправлятьJira</Constant>
 			<CommonForm>АутентификацияВСервисе</CommonForm>
 			<CommonForm>ФормаКонстант</CommonForm>
 			<CommonForm>ВводЗначенийСпискомСФлажками</CommonForm>
