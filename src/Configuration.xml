@@ -858,6 +858,7 @@
 			<CommonModule>ОценкаПроизводительностиКлиентСервер</CommonModule>
 			<CommonModule>ОценкаПроизводительностиПовтИсп</CommonModule>
 			<CommonModule>ОценкаПроизводительностиСлужебный</CommonModule>
+			<CommonModule>ОтчетыОбОшибкахСервер</CommonModule>
 			<CommonAttribute>ОбластьДанныхВспомогательныеДанные</CommonAttribute>
 			<CommonAttribute>ОбластьДанныхОсновныеДанные</CommonAttribute>
 			<ExchangePlan>ОбновлениеИнформационнойБазы</ExchangePlan>
