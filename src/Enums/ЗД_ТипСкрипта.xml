@@ -38,13 +38,13 @@
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 		</Properties>
 		<ChildObjects>
-			<EnumValue uuid="fcfe3425-2768-4b86-ac06-7fdb916ddf93">
+			<EnumValue uuid="48345c87-4584-4032-904a-f1178a49948d">
 				<Properties>
-					<Name>bat</Name>
+					<Name>_1С</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Bat</v8:content>
+							<v8:content>1С</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -69,6 +69,30 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Os</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7c7a2c9a-4174-472f-b91d-9de2c54a671f">
+				<Properties>
+					<Name>ЗапуститьПриложение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запустить приложение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fcfe3425-2768-4b86-ac06-7fdb916ddf93">
+				<Properties>
+					<Name>bat</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Bat</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

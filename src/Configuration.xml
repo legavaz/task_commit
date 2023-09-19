@@ -1164,6 +1164,7 @@
 			<Catalog>Конфигурация</Catalog>
 			<Catalog>Методы</Catalog>
 			<Catalog>ЭлементКонфигурации</Catalog>
+			<Catalog>кс_Сценарии</Catalog>
 			<Document>ОтчетыОбОшибках</Document>
 			<Enum>ВариантыПериода</Enum>
 			<Enum>ВариантыПубликацииДополнительныхОтчетовИОбработок</Enum>

@@ -38,11 +38,11 @@
 							<ContextMenu name="ТипСкриптаКонтекстноеМеню" id="12"/>
 							<ExtendedTooltip name="ТипСкриптаРасширеннаяПодсказка" id="13"/>
 						</InputField>
-						<CheckBoxField name="ВыполнитьКод" id="14">
-							<DataPath>Объект.ВыполнитьКод</DataPath>
+						<CheckBoxField name="ЖдатьЗавершения" id="19">
+							<DataPath>Объект.ЖдатьЗавершения</DataPath>
 							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ВыполнитьКодКонтекстноеМеню" id="15"/>
-							<ExtendedTooltip name="ВыполнитьКодРасширеннаяПодсказка" id="16"/>
+							<ContextMenu name="ЖдатьЗавершенияКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ЖдатьЗавершенияРасширеннаяПодсказка" id="21"/>
 						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>

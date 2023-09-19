@@ -9,7 +9,7 @@
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="11"/>
 			<ChildItems>
 				<InputField name="Период" id="1">
-					<DataPath>Запись.Period</DataPath>
+					<DataPath>1/-2</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
@@ -23,7 +23,7 @@
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="ИБ" id="4">
-			<DataPath>Запись.ИБ</DataPath>
+			<DataPath>Запись.Сценарий</DataPath>
 			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="ИБКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ИБРасширеннаяПодсказка" id="6"/>
@@ -35,7 +35,7 @@
 			<ExtendedTooltip name="СкриптРасширеннаяПодсказка" id="17"/>
 		</InputField>
 		<InputField name="Лог" id="7">
-			<DataPath>Запись.Лог</DataPath>
+			<DataPath>Запись.Результат</DataPath>
 			<ReadOnly>true</ReadOnly>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="ЛогКонтекстноеМеню" id="8"/>
