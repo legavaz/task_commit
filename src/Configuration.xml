@@ -275,6 +275,7 @@
 			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
 			<Subsystem>Администрирование</Subsystem>
+			<Subsystem>РеестрПроцедур</Subsystem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряРабочийЦвет</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряПраздникЦвет</StyleItem>
@@ -859,6 +860,7 @@
 			<CommonModule>ОценкаПроизводительностиПовтИсп</CommonModule>
 			<CommonModule>ОценкаПроизводительностиСлужебный</CommonModule>
 			<CommonModule>ОтчетыОбОшибкахСервер</CommonModule>
+			<CommonModule>РеестрПроцедурСервер</CommonModule>
 			<CommonAttribute>ОбластьДанныхВспомогательныеДанные</CommonAttribute>
 			<CommonAttribute>ОбластьДанныхОсновныеДанные</CommonAttribute>
 			<ExchangePlan>ОбновлениеИнформационнойБазы</ExchangePlan>
@@ -1159,6 +1161,9 @@
 			<Catalog>КлючевыеОперации</Catalog>
 			<Catalog>ПрофилиКлючевыхОпераций</Catalog>
 			<Catalog>зд_АналитикаJira</Catalog>
+			<Catalog>Конфигурация</Catalog>
+			<Catalog>Методы</Catalog>
+			<Catalog>ЭлементКонфигурации</Catalog>
 			<Document>ОтчетыОбОшибках</Document>
 			<Enum>ВариантыПериода</Enum>
 			<Enum>ВариантыПубликацииДополнительныхОтчетовИОбработок</Enum>
@@ -1186,6 +1191,7 @@
 			<Enum>СостоянияЗапросовНаИспользованиеВнешнихРесурсов</Enum>
 			<Enum>ЗД_ТипСкрипта</Enum>
 			<Enum>УровниПроизводительности</Enum>
+			<Enum>ТипыМетодов</Enum>
 			<Report>АнализЖурналаРегистрации</Report>
 			<Report>АнализПравДоступа</Report>
 			<Report>ПраваДоступа</Report>
@@ -1223,6 +1229,7 @@
 			<DataProcessor>ЗапускЗаданияSQL</DataProcessor>
 			<DataProcessor>ОбработатьПолученныеОтчетыОбОшибках</DataProcessor>
 			<DataProcessor>ОценкаПроизводительности</DataProcessor>
+			<DataProcessor>ОбработкаBSLФайлов</DataProcessor>
 			<InformationRegister>БезопасноеХранилищеДанных</InformationRegister>
 			<InformationRegister>ЖурналЗапускаСкриптов</InformationRegister>
 			<InformationRegister>ГруппыЗначенийДоступа</InformationRegister>
@@ -1286,6 +1293,7 @@
 			<InformationRegister>ЗамерыВремени</InformationRegister>
 			<InformationRegister>ЗамерыВремениТехнологические</InformationRegister>
 			<InformationRegister>ЗД_ЗагруженныеФайлыЗамеров</InformationRegister>
+			<InformationRegister>ФайлыBSL</InformationRegister>
 			<ExternalDataSource>кст_Jira_sql</ExternalDataSource>
 			<ExternalDataSource>ks_tech</ExternalDataSource>
 		</ChildObjects>
