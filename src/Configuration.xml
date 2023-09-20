@@ -269,8 +269,7 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<Subsystem>Задачник</Subsystem>
-			<Subsystem>кст_KPI</Subsystem>
+			<Subsystem>Планировщик</Subsystem>
 			<Subsystem>кстПоказатели</Subsystem>
 			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
@@ -1233,6 +1232,7 @@
 			<DataProcessor>ОбработатьПолученныеОтчетыОбОшибках</DataProcessor>
 			<DataProcessor>ОценкаПроизводительности</DataProcessor>
 			<DataProcessor>ОбработкаBSLФайлов</DataProcessor>
+			<DataProcessor>КонструкторКоманднойСтроки</DataProcessor>
 			<InformationRegister>БезопасноеХранилищеДанных</InformationRegister>
 			<InformationRegister>ЖурналЗапускаСкриптов</InformationRegister>
 			<InformationRegister>ГруппыЗначенийДоступа</InformationRegister>

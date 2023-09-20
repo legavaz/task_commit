@@ -17,6 +17,9 @@
 			<Picture/>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОценкаПроизводительности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗД_ЗагруженныеФайлыЗамеров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗамерыВремени</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЗД_ПапкаФайлов_apdex</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

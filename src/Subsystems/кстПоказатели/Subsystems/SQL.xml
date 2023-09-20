@@ -17,6 +17,10 @@
 			<Picture/>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.СтатистикаФрагментацииРазмераТаблиц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.ks_tech.Table.dbo_DDIPS</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.ks_tech.Table.dbo_View_1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтатистикаСоединенийMSSQL</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТаблицыМетаданных</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

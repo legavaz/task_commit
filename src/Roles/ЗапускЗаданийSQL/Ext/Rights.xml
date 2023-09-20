@@ -143,7 +143,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Subsystem.Задачник.Subsystem.Настройки</name>
+		<name>Subsystem.Планировщик.Subsystem.Настройки</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -161,7 +161,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Subsystem.Задачник.Subsystem.Справочники</name>
+		<name>Subsystem.Планировщик.Subsystem.Справочники</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -206,7 +206,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Subsystem.Задачник</name>
+		<name>Subsystem.Планировщик</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
