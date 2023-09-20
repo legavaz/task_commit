@@ -22,6 +22,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбработкаBSLФайлов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ФайлыBSL</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЭлементКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИттерацияЗагрузкиРеестраПроцедур</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
