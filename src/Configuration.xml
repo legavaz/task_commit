@@ -945,6 +945,7 @@
 			<ScheduledJob>ОчисткаЗамеровВремени</ScheduledJob>
 			<ScheduledJob>ЭкспортОценкиПроизводительности</ScheduledJob>
 			<ScheduledJob>ИмпортОценкиПроизводительности</ScheduledJob>
+			<ScheduledJob>ОбработатьПолученныеОтчетыОбОшибках</ScheduledJob>
 			<SettingsStorage>ХранилищеВариантовОтчетов</SettingsStorage>
 			<FunctionalOption>ИспользоватьВнешнихПользователей</FunctionalOption>
 			<FunctionalOption>ИспользоватьДополнительныеОбработкиСозданияСвязанныхОбъектов</FunctionalOption>
