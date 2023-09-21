@@ -101,13 +101,13 @@
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 				<CheckBoxField name="РеглЗаданияАктивность" id="43">
-					<DataPath>Список.РеглЗаданияАктивность</DataPath>
+					<DataPath>~Список.РеглЗаданияАктивность</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="РеглЗаданияАктивностьКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="РеглЗаданияАктивностьРасширеннаяПодсказка" id="45"/>
 				</CheckBoxField>
 				<LabelField name="РеглЗаданияИдентификатор" id="40">
-					<DataPath>Список.РеглЗаданияИдентификатор</DataPath>
+					<DataPath>~Список.РеглЗаданияИдентификатор</DataPath>
 					<ContextMenu name="РеглЗаданияИдентификаторКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="РеглЗаданияИдентификаторРасширеннаяПодсказка" id="42"/>
 				</LabelField>

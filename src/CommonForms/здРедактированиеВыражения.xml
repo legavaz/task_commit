@@ -1,30 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
-	<Subsystem uuid="83227bf9-04b0-4046-a357-8bd3e6cfd923">
+	<CommonForm uuid="d12173bb-a19e-424e-8c82-6b7638502d89">
 		<Properties>
-			<Name>Настройки</Name>
+			<Name>здРедактированиеВыражения</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Настройки</v8:content>
+					<v8:content>Редактирование выражения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Editing an expression</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
+			<FormType>Managed</FormType>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
-			<IncludeInCommandInterface>true</IncludeInCommandInterface>
-			<UseOneCommand>false</UseOneCommand>
+			<UsePurposes>
+				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
+				<v8:Value xsi:type="app:ApplicationUsePurpose">MobilePlatformApplication</v8:Value>
+			</UsePurposes>
+			<UseStandardCommands>true</UseStandardCommands>
+			<ExtendedPresentation/>
 			<Explanation/>
-			<Picture/>
-			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.НастройкаПочты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЗД_ПутьДо_oscript</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОстановитьИсполнение</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.SQLПравоЗапускаЗаданий</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.SQLВыполнениеЗаданий</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.SQLЗаданиеКоличествоПопыток</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.здПлатформы1С</xr:Item>
-			</Content>
 		</Properties>
-		<ChildObjects/>
-	</Subsystem>
+	</CommonForm>
 </MetaDataObject>

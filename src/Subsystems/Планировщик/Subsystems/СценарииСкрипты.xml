@@ -26,6 +26,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗапускЗаданияSQL</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЖурналЗапускаСкриптов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КонструкторКоманднойСтроки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.здРедактированиеВыражения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.УКО_ВставкаСсылкиНаОбъектБД</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

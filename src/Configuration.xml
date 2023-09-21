@@ -634,6 +634,8 @@
 			<Role>ВнешниеИсточникиJira_Чтение</Role>
 			<Role>НастройкаИОценкаПроизводительности</Role>
 			<CommonTemplate>ПолучениеДереваОбработчиковОбновления</CommonTemplate>
+			<CommonTemplate>УКО_ШаблоныРедактированияВыраженияПараметр</CommonTemplate>
+			<CommonTemplate>УКО_ШаблоныРедактированияВыраженияВнешнегоИсточника</CommonTemplate>
 			<CommonModule>АдминистрированиеКластера</CommonModule>
 			<CommonModule>ВариантыОтчетовСлужебныйКлиентСервер</CommonModule>
 			<CommonModule>ДополнительныеОтчетыИОбработки</CommonModule>
@@ -1126,6 +1128,8 @@
 			<CommonForm>ФормаНастроекОтчета</CommonForm>
 			<CommonForm>ФормаОтчета</CommonForm>
 			<CommonForm>ПараметрыАдминистрированияПрограммы</CommonForm>
+			<CommonForm>здРедактированиеВыражения</CommonForm>
+			<CommonForm>УКО_ВставкаСсылкиНаОбъектБД</CommonForm>
 			<Catalog>ВариантыОтчетов</Catalog>
 			<Catalog>ВерсииРасширений</Catalog>
 			<Catalog>ГруппыВнешнихПользователей</Catalog>
@@ -1166,6 +1170,7 @@
 			<Catalog>Методы</Catalog>
 			<Catalog>ЭлементКонфигурации</Catalog>
 			<Catalog>кс_Сценарии</Catalog>
+			<Catalog>здПлатформы1С</Catalog>
 			<Document>ОтчетыОбОшибках</Document>
 			<Enum>ВариантыПериода</Enum>
 			<Enum>ВариантыПубликацииДополнительныхОтчетовИОбработок</Enum>
@@ -1194,6 +1199,7 @@
 			<Enum>ЗД_ТипСкрипта</Enum>
 			<Enum>УровниПроизводительности</Enum>
 			<Enum>ТипыМетодов</Enum>
+			<Enum>зд_ТипПараметра</Enum>
 			<Report>АнализЖурналаРегистрации</Report>
 			<Report>АнализПравДоступа</Report>
 			<Report>ПраваДоступа</Report>
@@ -1297,6 +1303,7 @@
 			<InformationRegister>ЗамерыВремениТехнологические</InformationRegister>
 			<InformationRegister>ЗД_ЗагруженныеФайлыЗамеров</InformationRegister>
 			<InformationRegister>ФайлыBSL</InformationRegister>
+			<InformationRegister>зд_АктуальнаяПлатформа</InformationRegister>
 			<ExternalDataSource>кст_Jira_sql</ExternalDataSource>
 			<ExternalDataSource>ks_tech</ExternalDataSource>
 		</ChildObjects>

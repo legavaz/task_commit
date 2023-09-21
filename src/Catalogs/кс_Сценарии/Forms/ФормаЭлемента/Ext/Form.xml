@@ -118,6 +118,9 @@
 											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 											<ContextMenu name="ТЧ_СкриптыСкриптКонтекстноеМеню" id="34"/>
 											<ExtendedTooltip name="ТЧ_СкриптыСкриптРасширеннаяПодсказка" id="35"/>
+											<Events>
+												<Event name="OnChange">ТЧ_СкриптыСкриптПриИзменении</Event>
+											</Events>
 										</InputField>
 										<LabelField name="ТЧ_СкриптыКлючСтроки" id="69">
 											<DataPath>Объект.ТЧ_Скрипты.КлючСтроки</DataPath>
@@ -189,12 +192,22 @@
 													<ContextMenu name="ТЧ_ПараметрНаименованиеКонтекстноеМеню" id="73"/>
 													<ExtendedTooltip name="ТЧ_ПараметрНаименованиеРасширеннаяПодсказка" id="74"/>
 												</InputField>
+												<InputField name="ТЧ_ПараметрЗамена" id="108">
+													<DataPath>Объект.ТЧ_Параметр.ТипПараметр</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ТЧ_ПараметрЗаменаКонтекстноеМеню" id="109"/>
+													<ExtendedTooltip name="ТЧ_ПараметрЗаменаРасширеннаяПодсказка" id="110"/>
+												</InputField>
 												<InputField name="ТЧ_ПараметрПараметр" id="57">
 													<DataPath>Объект.ТЧ_Параметр.ПараметрЗначение</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 													<ContextMenu name="ТЧ_ПараметрПараметрКонтекстноеМеню" id="58"/>
 													<ExtendedTooltip name="ТЧ_ПараметрПараметрРасширеннаяПодсказка" id="59"/>
+													<Events>
+														<Event name="StartChoice">ТЧ_ПараметрПараметрЗначениеНачалоВыбора</Event>
+													</Events>
 												</InputField>
 												<LabelField name="ТЧ_ПараметрКлючСтроки" id="66">
 													<DataPath>Объект.ТЧ_Параметр.КлючСтроки</DataPath>
@@ -286,6 +299,72 @@
 							<ContextMenu name="РеглЗаданияИдентификаторКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="РеглЗаданияИдентификаторРасширеннаяПодсказка" id="9"/>
 						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДоступность" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доступность</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДоступностьРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<Table name="ТЧ_Доступ" id="89">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТЧ_Доступ</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЧ_ДоступКонтекстноеМеню" id="90"/>
+							<AutoCommandBar name="ТЧ_ДоступКоманднаяПанель" id="91"/>
+							<ExtendedTooltip name="ТЧ_ДоступРасширеннаяПодсказка" id="92"/>
+							<SearchStringAddition name="ТЧ_ДоступСтрокаПоиска" id="93">
+								<AdditionSource>
+									<Item>ТЧ_Доступ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧ_ДоступСтрокаПоискаКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="ТЧ_ДоступСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЧ_ДоступСостояниеПросмотра" id="96">
+								<AdditionSource>
+									<Item>ТЧ_Доступ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧ_ДоступСостояниеПросмотраКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="ТЧ_ДоступСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЧ_ДоступУправлениеПоиском" id="99">
+								<AdditionSource>
+									<Item>ТЧ_Доступ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧ_ДоступУправлениеПоискомКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="ТЧ_ДоступУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТЧ_ДоступНомерСтроки" id="102">
+									<DataPath>Объект.ТЧ_Доступ.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЧ_ДоступНомерСтрокиКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ТЧ_ДоступНомерСтрокиРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+								<InputField name="ТЧ_ДоступПользователь" id="105">
+									<DataPath>Объект.ТЧ_Доступ.Пользователь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЧ_ДоступПользовательКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ТЧ_ДоступПользовательРасширеннаяПодсказка" id="107"/>
+								</InputField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
 				</Page>
 			</ChildItems>

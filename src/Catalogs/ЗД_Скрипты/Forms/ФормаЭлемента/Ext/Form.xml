@@ -38,23 +38,164 @@
 							<ContextMenu name="ТипСкриптаКонтекстноеМеню" id="12"/>
 							<ExtendedTooltip name="ТипСкриптаРасширеннаяПодсказка" id="13"/>
 						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<Page name="Код" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<TextDocumentField name="КодФормированияСкрипта" id="4">
+							<DataPath>Объект.КодФормированияСкрипта</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КодФормированияСкриптаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="КодФормированияСкриптаРасширеннаяПодсказка" id="6"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПараметры" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<Table name="ТЧ_Параметр" id="28">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТЧ_Параметр</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЧ_ПараметрКонтекстноеМеню" id="29"/>
+							<AutoCommandBar name="ТЧ_ПараметрКоманднаяПанель" id="30"/>
+							<ExtendedTooltip name="ТЧ_ПараметрРасширеннаяПодсказка" id="31"/>
+							<SearchStringAddition name="ТЧ_ПараметрСтрокаПоиска" id="32">
+								<AdditionSource>
+									<Item>ТЧ_Параметр</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧ_ПараметрСтрокаПоискаКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="ТЧ_ПараметрСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЧ_ПараметрСостояниеПросмотра" id="35">
+								<AdditionSource>
+									<Item>ТЧ_Параметр</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧ_ПараметрСостояниеПросмотраКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="ТЧ_ПараметрСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЧ_ПараметрУправлениеПоиском" id="38">
+								<AdditionSource>
+									<Item>ТЧ_Параметр</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧ_ПараметрУправлениеПоискомКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="ТЧ_ПараметрУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТЧ_ПараметрНомерСтроки" id="41">
+									<DataPath>Объект.ТЧ_Параметр.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЧ_ПараметрНомерСтрокиКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ТЧ_ПараметрНомерСтрокиРасширеннаяПодсказка" id="43"/>
+								</LabelField>
+								<InputField name="ТЧ_ПараметрНаименование" id="44">
+									<DataPath>Объект.ТЧ_Параметр.Наименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЧ_ПараметрНаименованиеКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ТЧ_ПараметрНаименованиеРасширеннаяПодсказка" id="46"/>
+								</InputField>
+								<CheckBoxField name="ТЧ_ПараметрЗамена" id="52">
+									<DataPath>Объект.ТЧ_Параметр.ТипПараметр</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТЧ_ПараметрЗаменаКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ТЧ_ПараметрЗаменаРасширеннаяПодсказка" id="54"/>
+								</CheckBoxField>
+								<InputField name="ТЧ_ПараметрПараметрЗначение" id="49">
+									<DataPath>Объект.ТЧ_Параметр.ПараметрЗначение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТЧ_ПараметрПараметрЗначениеКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="ТЧ_ПараметрПараметрЗначениеРасширеннаяПодсказка" id="51"/>
+									<Events>
+										<Event name="StartChoice">ТЧ_ПараметрПараметрЗначениеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительно" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="48"/>
+					<ChildItems>
 						<CheckBoxField name="ЖдатьЗавершения" id="19">
 							<DataPath>Объект.ЖдатьЗавершения</DataPath>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ЖдатьЗавершенияКонтекстноеМеню" id="20"/>
 							<ExtendedTooltip name="ЖдатьЗавершенияРасширеннаяПодсказка" id="21"/>
 						</CheckBoxField>
+						<InputField name="Ответственный" id="55">
+							<DataPath>Объект.Ответственный</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="57"/>
+						</InputField>
 					</ChildItems>
-				</UsualGroup>
+				</Page>
 			</ChildItems>
-		</UsualGroup>
-		<TextDocumentField name="КодФормированияСкрипта" id="4">
-			<DataPath>Объект.КодФормированияСкрипта</DataPath>
-			<TitleLocation>None</TitleLocation>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="КодФормированияСкриптаКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="КодФормированияСкриптаРасширеннаяПодсказка" id="6"/>
-		</TextDocumentField>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
