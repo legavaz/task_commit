@@ -9,12 +9,5 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Item>
-		<Item>
-			<Form>Catalog.ЗД_ИнформационныеБазы.Form.ФормаСписка</Form>
-			<Height>3</Height>
-			<Visibility>
-				<xr:Common>true</xr:Common>
-			</Visibility>
-		</Item>
 	</Column>
 </HomePageWorkArea>

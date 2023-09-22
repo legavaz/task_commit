@@ -59,7 +59,7 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm/>
+			<DefaultObjectForm>Catalog.Конфигурация.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
 			<DefaultListForm/>
 			<DefaultChoiceForm/>
@@ -132,11 +132,11 @@
 			</Attribute>
 			<Attribute uuid="b8daf65f-8069-4248-90d1-064f8b8ddcbc">
 				<Properties>
-					<Name>ЭтоРасширение</Name>
+					<Name>УдалитьЭтоРасширение</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Это расширение</v8:content>
+							<v8:content>Удалить это расширение</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -172,11 +172,11 @@
 			</Attribute>
 			<Attribute uuid="a2afc9cd-c00f-47dd-ad89-341a19a7417c">
 				<Properties>
-					<Name>ОсновнаяКонфигурация</Name>
+					<Name>УдалитьОсновнаяКонфигурация</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Основная конфигурация</v8:content>
+							<v8:content>Удалить основная конфигурация</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -212,11 +212,11 @@
 			</Attribute>
 			<Attribute uuid="2ab88335-f545-434b-bf3a-7636d398dd9a">
 				<Properties>
-					<Name>ПутьВыгрузки</Name>
+					<Name>УдалитьПутьВыгрузки</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Путь выгрузки</v8:content>
+							<v8:content>Удалить путь выгрузки</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -256,7 +256,7 @@
 			</Attribute>
 			<Attribute uuid="d6fed105-b1c4-45e4-ac98-2833e8bd68d1">
 				<Properties>
-					<Name>ИБ_1С</Name>
+					<Name>УдалитьИБ_1С</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -296,11 +296,11 @@
 			</Attribute>
 			<Attribute uuid="40ae6e49-7ced-45d5-8659-e357bbc98ef7">
 				<Properties>
-					<Name>Хранилище</Name>
+					<Name>УдалитьХранилище</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Хранилище</v8:content>
+							<v8:content>Удалить хранилище</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -338,6 +338,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
+			<Form>ФормаЭлемента</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

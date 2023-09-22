@@ -29,6 +29,7 @@
 		<ChildObjects>
 			<Table>dbo_View_1</Table>
 			<Table>dbo_DDIPS</Table>
+			<Table>dbo_Duration_ERP_work_2_5</Table>
 		</ChildObjects>
 	</ExternalDataSource>
 </MetaDataObject>

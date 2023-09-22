@@ -34,6 +34,9 @@
 			<Table>dwh_1_jira_issues_measures_cl</Table>
 			<Table>dwh_1_jira_issues_measures_wl</Table>
 			<Table>dwh_1_jira_statuses</Table>
+			<Table>dwh_1_jira_worklogs</Table>
+			<Table>dwh_1_jira_logged_by</Table>
+			<Table>dwh_1_jira_issues_measures</Table>
 		</ChildObjects>
 	</ExternalDataSource>
 </MetaDataObject>

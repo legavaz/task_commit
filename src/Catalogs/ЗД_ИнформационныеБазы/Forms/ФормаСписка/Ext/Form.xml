@@ -111,6 +111,12 @@
 					<ContextMenu name="РеглЗаданияИдентификаторКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="РеглЗаданияИдентификаторРасширеннаяПодсказка" id="42"/>
 				</LabelField>
+				<CheckBoxField name="СохранятьCF" id="46">
+					<DataPath>Список.СохранятьCF</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СохранятьCFКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СохранятьCFРасширеннаяПодсказка" id="48"/>
+				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
