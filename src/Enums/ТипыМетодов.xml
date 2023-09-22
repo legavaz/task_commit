@@ -86,6 +86,42 @@
 					<Comment/>
 				</Properties>
 			</EnumValue>
+			<EnumValue uuid="7dd2fa95-b236-47f1-8d9d-baa70da0f7b6">
+				<Properties>
+					<Name>RecordSetModule</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Модуль набора записей</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ab5e5323-8d88-405a-afe8-00aa1f3c0042">
+				<Properties>
+					<Name>FormModule</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Модуль формы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="634a38d9-0f84-4ef6-bbf2-fc32462d3f4b">
+				<Properties>
+					<Name>CommandModule</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Модуль команды</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
 		</ChildObjects>
 	</Enum>
 </MetaDataObject>
