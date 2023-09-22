@@ -21,6 +21,7 @@
 			<Subsystem>APDEX</Subsystem>
 			<Subsystem>SQL</Subsystem>
 			<Subsystem>KPI</Subsystem>
+			<Subsystem>СервисРегистрацииОшибок</Subsystem>
 		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>
