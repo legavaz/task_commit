@@ -42,7 +42,7 @@
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
 			<EditType>InDialog</EditType>
-			<DefaultRecordForm/>
+			<DefaultRecordForm>InformationRegister.ЖурналЗапускаСкриптов.Form.ФормаЗаписи</DefaultRecordForm>
 			<DefaultListForm>InformationRegister.ЖурналЗапускаСкриптов.Form.ФормаСписка</DefaultListForm>
 			<AuxiliaryRecordForm/>
 			<AuxiliaryListForm/>
