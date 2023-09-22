@@ -18,15 +18,12 @@
 				<xr:Ref>StdPicture.Task</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОтладкаВыгрузкиЗагрузки</xr:Item>
-			</Content>
+			<Content/>
 		</Properties>
 		<ChildObjects>
 			<Subsystem>Справочники</Subsystem>
 			<Subsystem>СценарииСкрипты</Subsystem>
 			<Subsystem>Настройки</Subsystem>
-			<Subsystem>Хранилище</Subsystem>
 		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

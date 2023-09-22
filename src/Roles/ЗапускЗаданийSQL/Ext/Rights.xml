@@ -15,13 +15,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ЗапускЗаданияSQLЗначенияПоУмолчанию</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.кс_Сценарии</name>
 		<right>
 			<name>Read</name>

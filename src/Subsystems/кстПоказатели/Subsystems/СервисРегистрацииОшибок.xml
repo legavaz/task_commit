@@ -21,10 +21,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетыОбОшибках</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбработатьПолученныеОтчетыОбОшибках</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОтчетыОбОшибкахОтправлятьJira</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеОтчетОбОшибках</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АнализОшибок</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.кстСтатистикаОшибок</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПриродаОшибки</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
