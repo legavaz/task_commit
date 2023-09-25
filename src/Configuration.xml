@@ -633,6 +633,7 @@
 			<Role>ЗапускЗаданийSQL</Role>
 			<Role>ВнешниеИсточникиJira_Чтение</Role>
 			<Role>НастройкаИОценкаПроизводительности</Role>
+			<Role>ЧтениеОтчетОбОшибках</Role>
 			<CommonTemplate>ПолучениеДереваОбработчиковОбновления</CommonTemplate>
 			<CommonTemplate>УКО_ШаблоныРедактированияВыраженияПараметр</CommonTemplate>
 			<CommonTemplate>УКО_ШаблоныРедактированияВыраженияВнешнегоИсточника</CommonTemplate>
