@@ -17,8 +17,16 @@
 			</Synonym>
 			<Comment/>
 			<Type>
+				<v8:Type>cfg:CatalogRef.ЗД_ИнформационныеБазы</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>cfg:CatalogRef.кс_Сценарии</v8:Type>
 				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+				<v8:Type>cfg:CatalogRef.SQLЗадания</v8:Type>
 				<v8:Type>cfg:CatalogRef.SQLDBТестовые</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Properties>
 	</DefinedType>

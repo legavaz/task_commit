@@ -26,6 +26,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.кс_Сценарии</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.здПлатформы1С</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.зд_АктуальнаяПлатформа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.sqlТипыЗаданий</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
