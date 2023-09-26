@@ -1172,6 +1172,7 @@
 			<Catalog>ЭлементКонфигурации</Catalog>
 			<Catalog>кс_Сценарии</Catalog>
 			<Catalog>здПлатформы1С</Catalog>
+			<Catalog>АнализОшибок</Catalog>
 			<Document>ОтчетыОбОшибках</Document>
 			<Enum>ВариантыПериода</Enum>
 			<Enum>ВариантыПубликацииДополнительныхОтчетовИОбработок</Enum>

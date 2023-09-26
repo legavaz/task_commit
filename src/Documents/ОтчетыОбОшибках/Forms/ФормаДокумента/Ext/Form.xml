@@ -3,28 +3,126 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПисьмоОтветственному" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПисьмоОтветственному</CommandName>
+				<ExtendedTooltip name="ФормаПисьмоОтветственномуРасширеннаяПодсказка" id="31"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Номер" id="1">
-			<DataPath>Объект.Number</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
-		</InputField>
-		<InputField name="Дата" id="4">
-			<DataPath>Объект.Date</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
-		</InputField>
-		<UsualGroup name="Группа1" id="7">
+		<UsualGroup name="ГруппаШапка" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="8"/>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСтрока1" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа строка1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа строка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтрока1РасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Ответственный" id="21">
+							<DataPath>Объект.Ответственный</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="23"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСтрока2" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа строка2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа строка2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтрока2РасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<InputField name="Ошибка" id="27">
+							<DataPath>Объект.Ошибка</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОшибкаКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ОшибкаРасширеннаяПодсказка" id="29"/>
+						</InputField>
+						<InputField name="Метаданные" id="24">
+							<DataPath>Объект.Метаданные</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="МетаданныеКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="МетаданныеРасширеннаяПодсказка" id="26"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТело" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тело</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тело</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТелоРасширеннаяПодсказка" id="8"/>
 			<ChildItems>
 				<PictureField name="Скриншот" id="9">
 					<DataPath>Скриншот</DataPath>
@@ -73,4 +171,21 @@
 			</Type>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ПисьмоОтветственному" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Письмо ответственному</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Письмо ответственному</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПисьмоОтветственному</Action>
+		</Command>
+	</Commands>
 </Form>
