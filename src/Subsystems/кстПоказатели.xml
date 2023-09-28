@@ -15,20 +15,13 @@
 			<UseOneCommand>false</UseOneCommand>
 			<Explanation/>
 			<Picture/>
-			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.РегламентныеЗаданияВыполненныеСОшибками</xr:Item>
-			</Content>
+			<Content/>
 		</Properties>
 		<ChildObjects>
-			<Subsystem>Лицензии</Subsystem>
 			<Subsystem>APDEX</Subsystem>
 			<Subsystem>SQL</Subsystem>
 			<Subsystem>KPI</Subsystem>
 			<Subsystem>СервисРегистрацииОшибок</Subsystem>
-			<Subsystem>Тесты</Subsystem>
-			<Subsystem>ЖурналРегистрации</Subsystem>
-			<Subsystem>МониторингЗаданий</Subsystem>
-			<Subsystem>МониторингСервера</Subsystem>
 		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

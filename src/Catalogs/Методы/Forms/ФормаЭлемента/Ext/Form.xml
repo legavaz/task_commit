@@ -136,19 +136,9 @@
 				<InputField name="Тип" id="16">
 					<DataPath>Объект.Тип</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<MaxWidth>12</MaxWidth>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ТипКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="18"/>
-				</InputField>
-				<InputField name="ТипКода" id="34">
-					<DataPath>Объект.ТипКода</DataPath>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<MaxWidth>12</MaxWidth>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="ТипКодаКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="ТипКодаРасширеннаяПодсказка" id="36"/>
 				</InputField>
 				<InputField name="Метаданные" id="19">
 					<DataPath>Объект.Метаданные</DataPath>

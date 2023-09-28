@@ -38,12 +38,6 @@
 					<ContextMenu name="ОтключеноКонтекстноеМеню" id="58"/>
 					<ExtendedTooltip name="ОтключеноРасширеннаяПодсказка" id="59"/>
 				</CheckBoxField>
-				<InputField name="ТипЗадания" id="62">
-					<DataPath>Объект.ТипЗадания</DataPath>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="ТипЗаданияКонтекстноеМеню" id="63"/>
-					<ExtendedTooltip name="ТипЗаданияРасширеннаяПодсказка" id="64"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="Владелец" id="4">

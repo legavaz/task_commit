@@ -23,12 +23,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.SQLВыполнениеЗаданий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.SQLЗаданиеКоличествоПопыток</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.здПлатформы1С</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.АвтономныйСерверВерсия1С</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.АвтономныйСерверДанныеКластера</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.АвтономныйСерверПутьВыгрузки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.АвтономныйСерверПутьКонфигурации</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПутьDatabaseCompressionTool</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ГлубинаХранения</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -198,27 +198,6 @@
 									<ContextMenu name="ПерезапускКластераКонтекстноеМеню" id="91"/>
 									<ExtendedTooltip name="ПерезапускКластераРасширеннаяПодсказка" id="92"/>
 								</CheckBoxField>
-								<CheckBoxField name="СохранятьCF" id="207">
-									<DataPath>Объект.СохранятьCF</DataPath>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ежедневное сохранение файла конфигурации в cf, расширений в cfe</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ToolTipRepresentation>Button</ToolTipRepresentation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="СохранятьCFКонтекстноеМеню" id="208"/>
-									<ExtendedTooltip name="СохранятьCFРасширеннаяПодсказка" id="209"/>
-									<Events>
-										<Event name="OnChange">СохранятьCFПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<InputField name="ПортАвтономногоСервера" id="210">
-									<DataPath>Объект.ПортАвтономногоСервера</DataPath>
-									<ContextMenu name="ПортАвтономногоСервераКонтекстноеМеню" id="211"/>
-									<ExtendedTooltip name="ПортАвтономногоСервераРасширеннаяПодсказка" id="212"/>
-								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="SQL" id="202">
