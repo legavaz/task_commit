@@ -863,6 +863,7 @@
 			<CommonModule>ОценкаПроизводительностиСлужебный</CommonModule>
 			<CommonModule>ОтчетыОбОшибкахСервер</CommonModule>
 			<CommonModule>РеестрПроцедурСервер</CommonModule>
+			<CommonModule>МодульRAC</CommonModule>
 			<CommonAttribute>ОбластьДанныхВспомогательныеДанные</CommonAttribute>
 			<CommonAttribute>ОбластьДанныхОсновныеДанные</CommonAttribute>
 			<ExchangePlan>ОбновлениеИнформационнойБазы</ExchangePlan>
@@ -1308,6 +1309,7 @@
 			<InformationRegister>ФайлыBSL</InformationRegister>
 			<InformationRegister>зд_АктуальнаяПлатформа</InformationRegister>
 			<InformationRegister>ОбращенияКМетодам</InformationRegister>
+			<InformationRegister>ксЛицензии1С</InformationRegister>
 			<ExternalDataSource>кст_Jira_sql</ExternalDataSource>
 			<ExternalDataSource>ks_tech</ExternalDataSource>
 		</ChildObjects>
