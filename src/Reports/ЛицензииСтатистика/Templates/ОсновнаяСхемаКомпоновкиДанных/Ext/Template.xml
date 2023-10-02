@@ -7,6 +7,19 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодЧас</dataPath>
+			<field>ПериодЧас</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период час</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
 			<dataPath>Приложение</dataPath>
 			<field>Приложение</field>
 			<role>
@@ -28,19 +41,15 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ИмяФайла</dataPath>
-			<field>ИмяФайла</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Комплект</dataPath>
-			<field>Комплект</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ТипЛицензии</dataPath>
 			<field>ТипЛицензии</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комплект</dataPath>
+			<field>Комплект</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Кластер</dataPath>
@@ -50,39 +59,11 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>PID</dataPath>
-			<field>PID</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Пользователь</dataPath>
 			<field>Пользователь</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Сессия</dataPath>
-			<field>Сессия</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ЭтоКонфигуратор</dataPath>
-			<field>ЭтоКонфигуратор</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ИспользуетсяНаСервере</dataPath>
-			<field>ИспользуетсяНаСервере</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>МаксимумПользователей</dataPath>
-			<field>МаксимумПользователей</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Описание</dataPath>
-			<field>Описание</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ПолноеОписание</dataPath>
-			<field>ПолноеОписание</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Количество</dataPath>
@@ -94,65 +75,48 @@
 				</v8:item>
 			</title>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ПериодМинута</dataPath>
-			<field>ПериодМинута</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Период минута</v8:content>
-				</v8:item>
-			</title>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ
-	ксЛицензии1С.ПериодЗаписи КАК ПериодЗаписи,
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	НАЧАЛОПЕРИОДА(ксЛицензии1С.ПериодЗаписи, ЧАС) КАК ПериодЧас
+ПОМЕСТИТЬ ВТ_ПериодЧас
+ИЗ
+	РегистрСведений.ксЛицензии1С КАК ксЛицензии1С
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПериодЧас.ПериодЧас КАК ПериодЧас,
+	МАКСИМУМ(ксЛицензии1С.ПериодЗаписи) КАК ПериодЗаписи,
 	ксЛицензии1С.Сервер КАК Сервер,
 	ксЛицензии1С.Приложение КАК Приложение,
 	ксЛицензии1С.ТипЛицензии КАК ТипЛицензии,
 	ксЛицензии1С.Пользователь КАК Пользователь,
 	ксЛицензии1С.Кластер КАК Кластер,
-	ксЛицензии1С.Сессия КАК Сессия,
-	ксЛицензии1С.ЭтоКонфигуратор КАК ЭтоКонфигуратор,
-	ксЛицензии1С.ИмяФайла КАК ИмяФайла,
-	ксЛицензии1С.Комплект КАК Комплект,
-	ксЛицензии1С.ИспользуетсяНаСервере КАК ИспользуетсяНаСервере,
-	ксЛицензии1С.МаксимумПользователей КАК МаксимумПользователей,
-	ксЛицензии1С.PID КАК PID,
-	ксЛицензии1С.Описание КАК Описание,
-	ксЛицензии1С.ПолноеОписание КАК ПолноеОписание,
 	1 КАК Количество,
-	НАЧАЛОПЕРИОДА(ксЛицензии1С.ПериодЗаписи, МИНУТА) КАК ПериодМинута
+	ксЛицензии1С.Комплект КАК Комплект
 ИЗ
-	РегистрСведений.ксЛицензии1С КАК ксЛицензии1С
+	ВТ_ПериодЧас КАК ВТ_ПериодЧас
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ксЛицензии1С КАК ксЛицензии1С
+		ПО (НАЧАЛОПЕРИОДА(ксЛицензии1С.ПериодЗаписи, ЧАС) = ВТ_ПериодЧас.ПериодЧас)
 ГДЕ
-	ксЛицензии1С.ПериодЗаписи МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода</query>
+	ксЛицензии1С.ПериодЗаписи МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ПериодЧас.ПериодЧас,
+	ксЛицензии1С.Сервер,
+	ксЛицензии1С.Приложение,
+	ксЛицензии1С.ТипЛицензии,
+	ксЛицензии1С.Пользователь,
+	ксЛицензии1С.Кластер,
+	ксЛицензии1С.Комплект
+
+УПОРЯДОЧИТЬ ПО
+	ПериодЗаписи</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Количество</dataPath>
 		<expression>Сумма(Количество)</expression>
 	</totalField>
-	<parameter>
-		<name>КонецПериода</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Конец периода</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-		<expression>&amp;СтандартныйПериод.ДатаОкончания</expression>
-	</parameter>
 	<parameter>
 		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
@@ -168,8 +132,26 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
+		<useRestriction>false</useRestriction>
 		<expression>&amp;СтандартныйПериод.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ОкончаниеПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Окончание периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>&amp;СтандартныйПериод.ДатаОкончания</expression>
 	</parameter>
 	<parameter>
 		<name>СтандартныйПериод</name>
@@ -190,36 +172,58 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<settingsVariant>
-		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:name>Лиц_Статистика</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Лиц. статистика</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПериодЗаписи</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Пользователь</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Сервер</dcsset:field>
+					<dcsset:field>Кластер</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Количество</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комплект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПериодЗаписи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПериодЧас</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Пользователь</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Приложение</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Сессия</dcsset:field>
+					<dcsset:field>Сервер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипЛицензии</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОкончаниеПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>СтандартныйПериод</dcscor:parameter>
 					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisWeek</v8:variant>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Today</v8:variant>
 					</dcscor:value>
-					<dcsset:userSettingID>6f95a42f-5c9f-43ef-989d-de74ffb0c22d</dcsset:userSettingID>
+					<dcsset:userSettingID>83ef2173-fd9d-412c-a58d-b994f5be4773</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:outputParameters>
@@ -227,12 +231,16 @@
 					<dcscor:parameter>МакетОформления</dcscor:parameter>
 					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">Line</dcscor:value>
+				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemChart">
 				<dcsset:point>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>ПериодМинута</dcsset:field>
+							<dcsset:field>ПериодЧас</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -246,6 +254,23 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
 				</dcsset:point>
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Кластер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:series>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
@@ -269,7 +294,7 @@
 				<dcsset:item xsi:type="dcsset:StructureItemGroup">
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Комплект</dcsset:field>
+							<dcsset:field>ПериодЧас</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -283,12 +308,29 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
 					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Комплект</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
 						<dcsset:order>
 							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 						</dcsset:order>
 						<dcsset:selection>
 							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
 					</dcsset:item>
 				</dcsset:item>
 			</dcsset:item>

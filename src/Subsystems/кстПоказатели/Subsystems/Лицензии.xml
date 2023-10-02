@@ -17,7 +17,7 @@
 			<Picture/>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ксЛицензии1С</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.Лицензии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЛицензииСтатистика</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

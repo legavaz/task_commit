@@ -1216,7 +1216,7 @@
 			<Report>ПоказателиJira_old</Report>
 			<Report>СтатистикаФрагментацииРазмераТаблиц</Report>
 			<Report>ОценкаПроизводительности</Report>
-			<Report>Лицензии</Report>
+			<Report>ЛицензииСтатистика</Report>
 			<DataProcessor>КонсольЗаданий</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
 			<DataProcessor>ВыгрузкаЗагрузкаДанныхСверткаСсылокНаПользователейВРазделенныхДанных</DataProcessor>
