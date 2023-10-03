@@ -1217,6 +1217,7 @@
 			<Report>СтатистикаФрагментацииРазмераТаблиц</Report>
 			<Report>ОценкаПроизводительности</Report>
 			<Report>ЛицензииСтатистика</Report>
+			<Report>Аналитика</Report>
 			<DataProcessor>КонсольЗаданий</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
 			<DataProcessor>ВыгрузкаЗагрузкаДанныхСверткаСсылокНаПользователейВРазделенныхДанных</DataProcessor>
