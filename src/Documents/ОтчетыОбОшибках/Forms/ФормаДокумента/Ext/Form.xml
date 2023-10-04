@@ -10,6 +10,11 @@
 				<CommandName>Form.Command.ПисьмоОтветственному</CommandName>
 				<ExtendedTooltip name="ФормаПисьмоОтветственномуРасширеннаяПодсказка" id="31"/>
 			</Button>
+			<Button name="ФормаЗаполнитьОшибку" id="32">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьОшибку</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьОшибкуРасширеннаяПодсказка" id="33"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -130,17 +135,197 @@
 					<ContextMenu name="СкриншотКонтекстноеМеню" id="10"/>
 					<ExtendedTooltip name="СкриншотРасширеннаяПодсказка" id="11"/>
 				</PictureField>
-				<InputField name="ТекстОтчета" id="12">
-					<DataPath>Объект.ТекстОтчета</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<TitleLocation>Top</TitleLocation>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<HorizontalStretch>true</HorizontalStretch>
-					<VerticalStretch>true</VerticalStretch>
-					<MultiLine>true</MultiLine>
-					<ContextMenu name="ТекстОтчетаКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="ТекстОтчетаРасширеннаяПодсказка" id="14"/>
-				</InputField>
+				<Pages name="ГруппаСтраницы" id="86">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<Page name="ГруппаОписание" id="88">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текст отчета</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа описание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>HorizontalIfPossible</Group>
+							<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="89"/>
+							<ChildItems>
+								<InputField name="ТекстОтчета" id="12">
+									<DataPath>Объект.ТекстОтчета</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ТекстОтчетаКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ТекстОтчетаРасширеннаяПодсказка" id="14"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаРасшифровка" id="90">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расшифровка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расшифровка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаРасшифровкаРасширеннаяПодсказка" id="91"/>
+							<ChildItems>
+								<Table name="Ошибки" id="36">
+									<TitleLocation>Top</TitleLocation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.Ошибки</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ОшибкиКонтекстноеМеню" id="37"/>
+									<AutoCommandBar name="ОшибкиКоманднаяПанель" id="38">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="39"/>
+									<SearchStringAddition name="ОшибкиСтрокаПоиска" id="40">
+										<AdditionSource>
+											<Item>Ошибки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОшибкиСтрокаПоискаКонтекстноеМеню" id="41"/>
+										<ExtendedTooltip name="ОшибкиСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ОшибкиСостояниеПросмотра" id="43">
+										<AdditionSource>
+											<Item>Ошибки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОшибкиСостояниеПросмотраКонтекстноеМеню" id="44"/>
+										<ExtendedTooltip name="ОшибкиСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ОшибкиУправлениеПоиском" id="46">
+										<AdditionSource>
+											<Item>Ошибки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ОшибкиУправлениеПоискомКонтекстноеМеню" id="47"/>
+										<ExtendedTooltip name="ОшибкиУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ОшибкиНомерСтроки" id="49">
+											<DataPath>Объект.Ошибки.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОшибкиНомерСтрокиКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ОшибкиНомерСтрокиРасширеннаяПодсказка" id="51"/>
+										</LabelField>
+										<InputField name="ОшибкиРеквизит1" id="52">
+											<DataPath>Объект.Ошибки.Описание</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ОшибкиРеквизит1КонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="ОшибкиРеквизит1РасширеннаяПодсказка" id="54"/>
+										</InputField>
+										<InputField name="ОшибкиРеквизит2" id="55">
+											<DataPath>Объект.Ошибки.Ошибка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ОшибкиРеквизит2КонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="ОшибкиРеквизит2РасширеннаяПодсказка" id="57"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Table name="Стек" id="61">
+									<TitleLocation>Top</TitleLocation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.Стек</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СтекКонтекстноеМеню" id="62"/>
+									<AutoCommandBar name="СтекКоманднаяПанель" id="63">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СтекРасширеннаяПодсказка" id="64"/>
+									<SearchStringAddition name="СтекСтрокаПоиска" id="65">
+										<AdditionSource>
+											<Item>Стек</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СтекСтрокаПоискаКонтекстноеМеню" id="66"/>
+										<ExtendedTooltip name="СтекСтрокаПоискаРасширеннаяПодсказка" id="67"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СтекСостояниеПросмотра" id="68">
+										<AdditionSource>
+											<Item>Стек</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СтекСостояниеПросмотраКонтекстноеМеню" id="69"/>
+										<ExtendedTooltip name="СтекСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СтекУправлениеПоиском" id="71">
+										<AdditionSource>
+											<Item>Стек</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СтекУправлениеПоискомКонтекстноеМеню" id="72"/>
+										<ExtendedTooltip name="СтекУправлениеПоискомРасширеннаяПодсказка" id="73"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="СтекНомерСтроки" id="74">
+											<DataPath>Объект.Стек.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СтекНомерСтрокиКонтекстноеМеню" id="75"/>
+											<ExtendedTooltip name="СтекНомерСтрокиРасширеннаяПодсказка" id="76"/>
+										</LabelField>
+										<InputField name="СтекРеквизит1" id="77">
+											<DataPath>Объект.Стек.Метаданные</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="СтекРеквизит1КонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="СтекРеквизит1РасширеннаяПодсказка" id="79"/>
+										</InputField>
+										<InputField name="СтекРеквизит2" id="80">
+											<DataPath>Объект.Стек.NСтроки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="СтекРеквизит2КонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="СтекРеквизит2РасширеннаяПодсказка" id="82"/>
+										</InputField>
+										<InputField name="СтекРеквизит3" id="83">
+											<DataPath>Объект.Стек.Содержание</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="СтекРеквизит3КонтекстноеМеню" id="84"/>
+											<ExtendedTooltip name="СтекРеквизит3РасширеннаяПодсказка" id="85"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -186,6 +371,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПисьмоОтветственному</Action>
+		</Command>
+		<Command name="ЗаполнитьОшибку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить ошибку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить ошибку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьОшибку</Action>
 		</Command>
 	</Commands>
 </Form>
