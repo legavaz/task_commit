@@ -34,43 +34,68 @@
 					<v8:content>Группа шапка</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Vertical</Group>
+			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="16"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаСтрока1" id="17">
+				<UsualGroup name="ГруппаЛево" id="92">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа строка1</v8:content>
+							<v8:content>Группа лево</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа строка1</v8:content>
+							<v8:content>Группа лево</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Group>AlwaysHorizontal</Group>
+					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаСтрока1РасширеннаяПодсказка" id="18"/>
+					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="93"/>
 					<ChildItems>
-						<InputField name="Дата" id="4">
-							<DataPath>Объект.Date</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
-							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
-						</InputField>
-						<InputField name="Номер" id="1">
-							<DataPath>Объект.Number</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
-							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
-						</InputField>
+						<UsualGroup name="ГруппаДатаНомер" id="96">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата номер</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата номер</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="97"/>
+							<ChildItems>
+								<InputField name="Номер" id="1">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+								</InputField>
+								<InputField name="Дата" id="4">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="Ответственный" id="21">
 							<DataPath>Объект.Ответственный</DataPath>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
@@ -79,35 +104,41 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаСтрока2" id="19">
+				<UsualGroup name="ГруппаПраво" id="94">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа строка2</v8:content>
+							<v8:content>Группа право</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа строка2</v8:content>
+							<v8:content>Группа право</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Group>AlwaysHorizontal</Group>
+					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаСтрока2РасширеннаяПодсказка" id="20"/>
+					<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="95"/>
 					<ChildItems>
+						<InputField name="Метаданные" id="24">
+							<DataPath>Объект.Метаданные</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="МетаданныеКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="МетаданныеРасширеннаяПодсказка" id="26"/>
+						</InputField>
 						<InputField name="Ошибка" id="27">
 							<DataPath>Объект.Ошибка</DataPath>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 							<ContextMenu name="ОшибкаКонтекстноеМеню" id="28"/>
 							<ExtendedTooltip name="ОшибкаРасширеннаяПодсказка" id="29"/>
 						</InputField>
-						<InputField name="Метаданные" id="24">
-							<DataPath>Объект.Метаданные</DataPath>
+						<InputField name="Пользователь1С" id="98">
+							<DataPath>Объект.Пользователь1С</DataPath>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-							<ContextMenu name="МетаданныеКонтекстноеМеню" id="25"/>
-							<ExtendedTooltip name="МетаданныеРасширеннаяПодсказка" id="26"/>
+							<ContextMenu name="Пользователь1СКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="Пользователь1СРасширеннаяПодсказка" id="100"/>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>

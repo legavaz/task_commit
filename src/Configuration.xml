@@ -1174,6 +1174,7 @@
 			<Catalog>кс_Сценарии</Catalog>
 			<Catalog>здПлатформы1С</Catalog>
 			<Catalog>АнализОшибок</Catalog>
+			<Catalog>Пользователи1С</Catalog>
 			<Document>ОтчетыОбОшибках</Document>
 			<Document>Коммит</Document>
 			<Enum>ВариантыПериода</Enum>
@@ -1219,6 +1220,7 @@
 			<Report>ОценкаПроизводительности</Report>
 			<Report>ЛицензииСтатистика</Report>
 			<Report>Аналитика</Report>
+			<Report>кстСтатистикаОшибок</Report>
 			<DataProcessor>КонсольЗаданий</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
 			<DataProcessor>ВыгрузкаЗагрузкаДанныхСверткаСсылокНаПользователейВРазделенныхДанных</DataProcessor>
