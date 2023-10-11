@@ -17,8 +17,6 @@
 			<Picture/>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.зд_АналитикаJira</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.ПоказателиJira</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.ПоказателиJira_old</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dbo_users</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_d_time</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_assignees</xr:Item>
@@ -26,6 +24,21 @@
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_issues_measures_cl</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_issues_measures_wl</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_statuses</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_worklogs</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_logged_by</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПоказателиJiraNew</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExternalDataSource.кст_Jira_sql.Table.dwh_1_jira_issues_measures</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПоказателиJiraKPIПФ_2006</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.jira_отражение_часов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтработанноеВремя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РН_ОтработанноеВремя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстатокОтработаныхЧасов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.jira_SD_DEV</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.jira_SD_DEV_аналитика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ксКартаКомпетенцийСотрудника</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ксСертификатыКурсы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ксРазделыКартыКомпетенций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Экспертиза</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

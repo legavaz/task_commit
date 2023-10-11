@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Выполнить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<DefaultItem>true</DefaultItem>
+				<CommandName>Form.Command.Выполнить</CommandName>
+				<ExtendedTooltip name="ВыполнитьРасширеннаяПодсказка" id="2"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="ИБ" id="6">
+			<DataPath>Объект.ИБ</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИБКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="ИБРасширеннаяПодсказка" id="8"/>
+		</InputField>
+		<InputField name="КаталогВременныхФайлов" id="3">
+			<DataPath>Объект.КаталогВременныхФайлов</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КаталогВременныхФайловКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="КаталогВременныхФайловРасширеннаяПодсказка" id="5"/>
+		</InputField>
+		<UsualGroup name="ГруппаПеременные" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>2- Запись в бд (не заполнять сначала - продолжение)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа переменные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаПеременныеРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<CommandBar name="Группа1" id="25">
+					<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<Button name="Выполнить2" id="23">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Выполнить2</CommandName>
+							<ExtendedTooltip name="Выполнить2РасширеннаяПодсказка" id="24"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<InputField name="Хранилище" id="20">
+					<DataPath>Объект.Хранилище</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ХранилищеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ХранилищеРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ФайлОтчета" id="9">
+					<DataPath>1/0:acfe2b86-2169-4b45-b516-8e4d07092931</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ФайлОтчетаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ФайлОтчетаРасширеннаяПодсказка" id="11"/>
+				</InputField>
+				<InputField name="ФайлРезультата" id="12">
+					<DataPath>Объект.ИмяФайлаОтчета</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ФайлРезультатаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ФайлРезультатаРасширеннаяПодсказка" id="14"/>
+				</InputField>
+				<InputField name="ФайлЛога" id="15">
+					<DataPath>1/0:f69fb955-b33b-4c7f-aaec-72c7f9303eaf</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ФайлЛогаКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ФайлЛогаРасширеннаяПодсказка" id="17"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Отладка_СформироватьОтчетПоВерсиямХранилища</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:acfe2b86-2169-4b45-b516-8e4d07092931</Field>
+				<Field>1/0:f69fb955-b33b-4c7f-aaec-72c7f9303eaf</Field>
+				<Field>Объект.ИБ</Field>
+				<Field>Объект.ИмяФайлаОтчета</Field>
+				<Field>Объект.КаталогВременныхФайлов</Field>
+				<Field>Объект.Хранилище</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьЗадачу</Action>
+		</Command>
+		<Command name="Выполнить2" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить 2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выполнить2</Action>
+		</Command>
+	</Commands>
+</Form>

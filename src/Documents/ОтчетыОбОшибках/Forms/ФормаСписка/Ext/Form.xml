@@ -2,6 +2,18 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
 		<UsualGroup name="ГруппаОбщая" id="31">
 			<Title>
 				<v8:item>
@@ -20,18 +32,6 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаОбщаяРасширеннаяПодсказка" id="32"/>
 			<ChildItems>
-				<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа пользовательских настроек</v8:content>
-						</v8:item>
-					</Title>
-					<VerticalStretch>false</VerticalStretch>
-					<Group>Vertical</Group>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
-				</UsualGroup>
 				<Table name="Список" id="3">
 					<Representation>List</Representation>
 					<CommandBarLocation>None</CommandBarLocation>
@@ -120,13 +120,23 @@
 							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="29"/>
 							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="30"/>
 						</LabelField>
+						<LabelField name="ДополнительнаяИнформацияОтчета" id="39">
+							<DataPath>Список.ДополнительнаяИнформацияОтчета</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>База</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДополнительнаяИнформацияОтчетаКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ДополнительнаяИнформацияОтчетаРасширеннаяПодсказка" id="41"/>
+						</LabelField>
 					</ChildItems>
 				</Table>
 				<InputField name="ТекстОшибки" id="33">
 					<DataPath>ТекстОшибки</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<MultiLine>true</MultiLine>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ТекстОшибкиКонтекстноеМеню" id="34"/>
 					<ExtendedTooltip name="ТекстОшибкиРасширеннаяПодсказка" id="35"/>
 				</InputField>
